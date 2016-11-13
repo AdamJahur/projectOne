@@ -1,0 +1,18 @@
+.container {
+	margin-top: 10px;
+}
+
+img {
+	width: 100%;
+}
+
+button {
+	margin: 20px 0px;
+	text-align: center;
+	border: none;
+	background-color: #B2D0ED;
+}
+
+.col-md-2 {
+	text-align: center;
+}
