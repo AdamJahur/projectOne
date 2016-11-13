@@ -1,39 +1,11 @@
-	function searchMovieImage() {
+$(document).ready(function () {
+
+	function multiImageFunction () {
+
+		var movieID = "24428";
 
 		var query = {
 			api_key: "0735005732556ad68ab1353886fe6517",
-			query: "The+Avengers" 
-		}
-
-		var queryURL = "https://api.themoviedb.org/3/search/movie?" + $.param(query);
-
-		var request = {
-			url: queryURL,
-			method: 'GET'
-		}
-
-		console.log(queryURL);
-
-		$.ajax(request).done(function(response) {
-
-			var movieID = response.results[0].id;
-			$('.thumbnail').attr("data-movieID", movieID);
-
-			
-		});
-
-	}	
-
-	searchMovieImage();
-
-	$('.button').on('click', displayMovieImage);
-
-	function displayMovieImage() {
-
-		var movieID = $('#smallImage01').attr('data-movieID');
-		
-		var query = {
-			api_key: "0735005732556ad68ab1353886fe6517", 
 		}
 
 		var queryURL = "https://api.themoviedb.org/3/movie/" + movieID + "/images?" + $.param(query);
@@ -45,20 +17,32 @@
 
 		$.ajax(request).done(function(response) {
 
-			console.log(response);	
+			console.log(response);
 
-			var movieBackdrop = response.backdrops[0].file_path;
-			var filePath = "https://image.tmdb.org/t/p/w500/" + movieBackdrop;
-			$('#largeImage').attr('src', filePath);
+			var largeImage = $('#largeImage');
+			largeImage.attr('src', 'https://image.tmdb.org/t/p/w500' + response.backdrops[0].file_path);
 
-			// var movieImage = $('<img>');
-			// var movieBackdrop = response.backdrops[0].file_path;
-			// var filePath = "https://image.tmdb.org/t/p/w500/" + movieBackdrop;
-			// movieImage.attr('src', filePath);
-			// $('.appendSpace').append(movieImage);
+			for (i = 0; i < 4; i++) {
 
-		})
-	
+				var imageField = $('#smallImage' + i);
+				var imageSource = response.backdrops[i].file_path;
+				console.log(imageSource)
+
+				imageField.attr('src', 'https://image.tmdb.org/t/p/w500' + imageSource);
+			}
+
+
+		});
+
+		console.log(queryURL);
 	}
 
-	displayMovieImage();
+	$('img').on('click', function() {
+
+		var imageSource = $(this).attr('src');
+		$('#largeImage').attr('src', imageSource);
+	})
+
+	multiImageFunction();
+
+});
