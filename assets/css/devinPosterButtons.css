@@ -1,5 +1,9 @@
+body{
+	background: url(../images/gifreel.jpg);
+}
 .container {
 	margin-top: 10px;
+	padding-bottom: 50px;
 }
 
 img {
@@ -15,4 +19,28 @@ button {
 
 .col-md-2 {
 	text-align: center;
+}
+.navbar-right{
+	margin-right: 40px;
+	color: blue;
+	background-color: white;
+	margin-top: -10px;
+	margin-bottom: 10px;
+}
+strong{
+	margin-top: 18px;
+	margin-left: 20px;
+}
+h3{
+	height: 0px;
+	color: white;
+}
+footer{
+	position: fixed;
+	left: 0px;
+	bottom: -20px;
+	width: 100%;
+	font-family: sans-serif;
+	text-align: center;
+	color: white;
 }
