@@ -20,9 +20,10 @@ body{
 	font-family: 'Great Vibes', 'cursive';
 	color: white;
 	padding-left: 20px;
-	padding-top: 20px;
+	padding-top: 13px;
 	font-size: 30pt;
 	letter-spacing: 3px;
+	font-weight: bold;
 }
 footer{
 	position: fixed;
