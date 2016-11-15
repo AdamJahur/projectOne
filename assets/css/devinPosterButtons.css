@@ -1,3 +1,6 @@
+/*font-family: 'Raleway', sans-serif;
+font-family: 'Great Vibes', cursive;*/
+
 body{
 	background: url(../images/gifreel.jpg);
 }
@@ -15,6 +18,7 @@ button {
 	text-align: center;
 	border: none;
 	background-color: #B2D0ED;
+	font-family: 'Raleway', 'sans-serif';
 }
 
 .col-md-2 {
@@ -24,16 +28,16 @@ button {
 	margin-right: 40px;
 	color: blue;
 	background-color: white;
-	margin-top: -10px;
-	margin-bottom: 10px;
-}
-strong{
-	margin-top: 18px;
-	margin-left: 20px;
+	margin-top: -20px;
+	margin-bottom: 20px;
 }
 h3{
-	height: 0px;
+	height: 15px;
 	color: white;
+	font-family: 'Great Vibes', 'cursive';
+	font-size: 30pt;
+	padding-left: 20px;
+	letter-spacing: 3px;
 }
 footer{
 	position: fixed;
@@ -43,4 +47,8 @@ footer{
 	font-family: sans-serif;
 	text-align: center;
 	color: white;
+	font-family: 'Raleway', 'sans-serif'
+}
+.selectButton{
+	font-family: 'Raleway', 'sans-serif'
 }
