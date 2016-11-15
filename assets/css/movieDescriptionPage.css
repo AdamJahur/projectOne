@@ -53,3 +53,7 @@ h3, .date-picker, .middle{
 .date-picker, .middle{
 	font-weight: bolder;
 }
+.modal-theatre{
+	font-family: 'Great Vibes', 'cursive';
+	font-size: 30pt;
+}
