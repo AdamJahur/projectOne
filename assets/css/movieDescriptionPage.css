@@ -1,0 +1,33 @@
+.container{
+	padding-bottom: 100px;
+}
+.head{
+	margin: 0px -140px;
+	margin-bottom: 40px;
+}
+.navbar-right{
+	margin-right: 40px;
+	color: blue;
+	background-color: white;
+	margin-top: -50px;
+	margin-bottom: 20px;
+	font-family: 'Raleway', 'sans-serif';
+}
+.title{
+	font-family: 'Great Vibes', 'cursive';
+	color: white;
+	padding-left: 20px;
+	padding-top: 20px;
+	font-size: 30pt;
+	letter-spacing: 3px;
+}
+footer{
+	position: fixed;
+	left: 0px;
+	bottom: -20px;
+	width: 100%;
+	font-family: sans-serif;
+	text-align: center;
+	color: white;
+	font-family: 'Raleway', 'sans-serif'
+}
