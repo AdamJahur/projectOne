@@ -37,7 +37,7 @@ footer{
 .row{
 	font-family: 'Raleway', 'sans-serif';
 }
-#submit{
+#submit, #addCal, #back{
 	color: blue;
 	font-family: 'Raleway', 'sans-serif';
 }
