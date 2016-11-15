@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<title>Movie Dynamic</title>
+
+	<!-- Style Sheets -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+ 	<!-- <link rel="stylesheet" href="/resources/demos/style.css"> -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" href="http://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.min.css">
+	<link rel="stylesheet" type="text/css" href="">
+
+</head>
+
+<body>
+
+	<div class="container">
+
+		<headeer>Feature Presentation</headeer>
+
+
+		<div class="row">
+			
+			<div class="medium-6 columns">
+
+				<img class="thumbnail" src="http://placehold.it/650x350">
+				<div class="row small-up-4">
+
+					<div class="column">
+						<img class="thumbnail" src="http://placehold.it/250x200">
+					</div>
+
+					<div class="column">
+						<img class="thumbnail" src="http://placehold.it/250x200">
+					</div>
+
+					<div class="column">
+						<img class="thumbnail" src="http://placehold.it/250x200">
+					</div>
+
+					<div class="column">
+						<img class="thumbnail" src="http://placehold.it/250x200">
+					</div>
+				</div>
+			</div>
+
+			<!-- User Input -->
+
+			<div class="medium-6 large-5 columns">
+
+				<h3>Doctor Strange</h3>				
+
+				<div class="row">
+					<div class="small-3 columns">
+						<label for="middle-label" class="middle">Select Date: </label>
+					</div>
+					<div class="small-9 columns">
+						<input type="text" id="date-picker" placeholder="01/01/2016">
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="small-3 columns">
+						<label for="middle-label" class="date-picker">Zip Code: </label>
+					</div>
+					<div class="small-9 columns">
+						<input type="text" id="middle-label" placeholder="12345">
+					</div>
+				</div>
+
+				<div class="row">
+					
+					<button id="submit">Submit</button>
+				</div>
+			</div>			
+		</div>
+
+		<div class="column row">
+			<hr>
+			<ul class="tabs" data-tabs id="example-tabs">
+			<li class="tabs-title is-active"><a href="#panel1" aria-selected="true">Description</a></li>
+				<li class="tabs-title"><a href="#panel2">Reviews</a></li>
+			</ul>
+			<div class="tabs-content" data-tabs-content="example-tabs">
+				<div class="tabs-panel is-active" id="panel1">
+					<h4>Movie Description</h4>
+					<div class="media-object stack-for-small">
+						<div class="media-object-section">
+							<img class="thumbnail" src="http://placehold.it/200x200">
+						</div>
+						<div class="media-object-section">
+							<h5>Movie Name</h5>
+							<p>I'm going to improvise. Listen, there's something you should know about me... about inception. An idea is like a virus, resilient, highly contagious. The smallest seed of an idea can grow. It can grow to define or destroy you.</p>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+
+		<div class="row">
+			
+			<input>Type Here
+		</div>
+	</div>
+
+	<!-- Javascript -->
+	<script src="https://code.jquery.com/jquery-3.1.1.js" integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA=" crossorigin="anonymous"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	<script src="assets/javascript/movieDescriptionPageJava.js"></script>
+
+
+
+</body>
+</html>

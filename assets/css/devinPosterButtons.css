@@ -3,6 +3,7 @@ body{
 }
 .container {
 	margin-top: 10px;
+	padding-bottom: 50px;
 }
 
 img {
@@ -34,9 +35,12 @@ h3{
 	height: 0px;
 	color: white;
 }
-
-footer {
+footer{
+	position: fixed;
+	left: 0px;
+	bottom: -20px;
+	width: 100%;
+	font-family: sans-serif;
 	text-align: center;
-	color:white;
-	position: absolute;
+	color: white;
 }
