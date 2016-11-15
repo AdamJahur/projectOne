@@ -31,3 +31,13 @@ footer{
 	color: white;
 	font-family: 'Raleway', 'sans-serif'
 }
+.row{
+	font-family: 'Raleway', 'sans-serif';
+}
+#submit{
+	color: blue;
+	font-family: 'Raleway', 'sans-serif';
+}
+h3, h4, h5{
+	font-family: 'Raleway', 'sans-serif';
+}
