@@ -58,3 +58,7 @@ h3, .date-picker, .middle{
 	font-family: 'Great Vibes', 'cursive';
 	font-size: 30pt;
 }
+
+img {
+	width: 100%;
+}
