@@ -24,7 +24,7 @@ $(document).ready(function () {
 				
 				var columnBlock = $('<div class="col-md-2">');
 				var imagePoster = $('<img>');
-				var selectButton = $('<button class="selectButton">');
+				var selectButton = $('<a href="secondPage.html"><button class="selectButton"></button></a>');
 
 				var movieID = results[i].id;
 				
