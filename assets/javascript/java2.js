@@ -45,4 +45,9 @@ $(document).ready(function () {
 
 	multiImageFunction();
 
+$(function (){
+	$("#date-picker").datepicker();
+
+});
+
 });
