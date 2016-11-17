@@ -24,17 +24,24 @@ $(document).ready(function () {
 				
 				var columnBlock = $('<div class="col-md-2">');
 				var imagePoster = $('<img>');
-				var selectButton = $('<a href="secondPage.html"><button class="selectButton"></button></a>');
-
+				var selectButton = $('<a href="secondPage.html"><button class="selectButton" onclick="myFunction"></button></a>');
 				var movieID = results[i].id;
+				var imagePoster_link = $('<a href="secondPage.html">');
+
+				imagePoster_link.attr('movie-id', movieID);
+				imagePoster_link.addClass('moviePoster')
+
+				columnBlock.on('click', myFunction);
+				columnBlock.attr('movie-id', movieID);
+
 				
-				imagePoster.attr('movie-id', movieID);
+				// imagePoster.attr('movie-id', movieID);
 				imagePoster.attr('src', 'https://image.tmdb.org/t/p/w500' + results[i].poster_path);
 
 				selectButton.text("Select Movie");
 				selectButton.attr('movie-id', movieID);
 
-				var imagePoster_link = $('<a href="secondPage.html">');
+
 				imagePoster_link.append(imagePoster);
 				columnBlock.append(imagePoster_link);
 				columnBlock.append(selectButton);
@@ -49,12 +56,13 @@ $(document).ready(function () {
 
 	imagePosters();
 
-	$('img').on('click', function () {
+	function myFunction () {
 
-		var movieID = $(this).attr(movieID);
-		setLocalStorage
+		localStorage.clear();
+		var movieID = $(this).attr('movie-id');
+		localStorage.setItem('movieID', movieID);
 		console.log(movieID);
-	})
+	};
 
 });
 
