@@ -26,7 +26,6 @@ $(document).ready(function () {
 
 				var imageField = $('#smallImage' + i);
 				var imageSource = response.backdrops[i].file_path;
-				console.log(imageSource)
 
 				imageField.attr('src', 'https://image.tmdb.org/t/p/w500' + imageSource);
 			}
