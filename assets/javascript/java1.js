@@ -49,5 +49,12 @@ $(document).ready(function () {
 
 	imagePosters();
 
+	$('img').on('click', function () {
+
+		var movieID = $(this).attr(movieID);
+		setLocalStorage
+		console.log(movieID);
+	})
+
 });
 

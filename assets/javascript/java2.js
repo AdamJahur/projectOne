@@ -1,5 +1,7 @@
 $(document).ready(function () {
 
+	
+
 	function multiImageFunction () {
 
 		var movieID = "284052";
@@ -86,10 +88,5 @@ $(document).ready(function () {
 
 	// Testing & Debugging
 	
-
-$(function (){
-	$("#date-picker").datepicker();
-
-});
 
 });
