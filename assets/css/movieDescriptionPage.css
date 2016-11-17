@@ -1,12 +1,16 @@
 body{
 	background: url(../images/gifreel3.jpg);
+	background-repeat: none;
+	background-size: 100%;
 }
 .container{
 	padding-bottom: 100px;
+	width: 87%;
 }
 .head{
 	margin: 0px -140px;
 	margin-bottom: 40px;
+
 }
 .navbar-right{
 	margin-right: 40px;
@@ -15,7 +19,9 @@ body{
 	margin-top: -50px;
 	margin-bottom: 20px;
 	font-family: 'Raleway', 'sans-serif';
+	border-radius: 10%;
 }
+
 .title{
 	font-family: 'Great Vibes', 'cursive';
 	color: white;
@@ -24,6 +30,7 @@ body{
 	font-size: 30pt;
 	letter-spacing: 3px;
 	font-weight: bold;
+	margin-right: 50%;
 }
 footer{
 	position: fixed;
