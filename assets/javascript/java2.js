@@ -17,8 +17,6 @@ $(document).ready(function () {
 
 		$.ajax(request).done(function(response) {
 
-			console.log(response);
-
 			var largeImage = $('#largeImage');
 			largeImage.attr('src', 'https://image.tmdb.org/t/p/w500' + response.backdrops[0].file_path);
 
@@ -43,6 +41,50 @@ $(document).ready(function () {
 		$('#largeImage').attr('src', imageSource);
 	})
 
+	function movieDescription () {
+
+		var movieID = "284052";
+
+		var query = {
+			api_key: "0735005732556ad68ab1353886fe6517",
+		}
+
+		var queryURL = "https://api.themoviedb.org/3/movie/" + movieID + "?" +  $.param(query);
+
+		var request = {
+			url: queryURL,
+			method: 'GET'
+		}
+
+		$.ajax(request).done(function(response) {
+
+			console.log(response);
+
+			var image = ('https://image.tmdb.org/t/p/w500' + response.backdrop_path);
+			var title = response.title;
+			var tagLine = response.tagline;
+			var runtime = ("Runtime: " + response.runtime + " min");
+			var overview = response.overview;
+
+			$('#poster').attr('src', image);
+			$('#movieName').html(title);
+			$('#movieDescription').html(overview);
+			$('#runtime').html(runtime);
+
+			// Testing & Debugging
+				console.log(image);
+				console.log(title);
+				console.log(tagLine);
+				console.log(runtime);
+				console.log(overview);
+		
+		})
+	}
+
 	multiImageFunction();
+	movieDescription();
+
+	// Testing & Debugging
+	
 
 });
