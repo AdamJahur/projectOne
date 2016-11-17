@@ -1,6 +1,6 @@
 $(document).ready(function () {
 
-	
+	var movieID = localStorage.getItem('movieID');
 
 	function multiImageFunction () {
 
@@ -45,7 +45,7 @@ $(document).ready(function () {
 
 	function movieDescription () {
 
-		var movieID = "284052";
+		// var movieID = "284052";
 
 		var query = {
 			api_key: "0735005732556ad68ab1353886fe6517",
