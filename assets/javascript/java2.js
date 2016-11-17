@@ -87,4 +87,9 @@ $(document).ready(function () {
 	// Testing & Debugging
 	
 
+$(function (){
+	$("#date-picker").datepicker();
+
+});
+
 });
