@@ -60,5 +60,18 @@ h3, .date-picker, .middle{
 }
 
 img {
-	width: 100%;
+	
+}
+
+h5 {
+	font-weight: bolder;
+	color: #2E35C2;
+}
+
+p {
+	color: black;
+}
+
+button {
+	margin-right: 10px;
 }
