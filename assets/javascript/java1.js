@@ -34,7 +34,9 @@ $(document).ready(function () {
 				selectButton.text("Select Movie");
 				selectButton.attr('movie-id', movieID);
 
-				columnBlock.append(imagePoster);
+				var imagePoster_link = $('<a href="secondPage.html">');
+				imagePoster_link.append(imagePoster);
+				columnBlock.append(imagePoster_link);
 				columnBlock.append(selectButton);
 				$('.row').append(columnBlock);
 
