@@ -20,15 +20,26 @@ $(document).ready(function () {
 
 		$.ajax(request).done(function(response) {
 
+			numImages = 4;
+
 			var largeImage = $('#bigImage');
 			largeImage.attr('src', 'https://image.tmdb.org/t/p/w500' + response.backdrops[0].file_path);
 
-			for (i = 0; i < 4; i++) {
+			for (i = 0; i < numImages; i++) {
 
-				var imageField = $('#smallImage' + i);
-				var imageSource = response.backdrops[i].file_path;
+				var imageSource = 'https://image.tmdb.org/t/p/w500' + response.backdrops[i].file_path;
+				var columnBlock = $('<div class="column">');
+				var imageBlock = $('<img id=smallImage' + [i] + ' class=thumbnail src=' + imageSource + '>')
 
-				imageField.attr('src', 'https://image.tmdb.org/t/p/w500' + imageSource);
+				columnBlock.attr('src', imageSource);
+				columnBlock.append(imageBlock);
+				columnBlock.on('click', movieImage);
+
+				$('.smallImage').append(columnBlock);
+
+			// 	var imageField = $('#smallImage' + i);
+
+			// 	imageField.attr('src', 'https://image.tmdb.org/t/p/w500' + imageSource);
 			}
 
 
@@ -37,11 +48,12 @@ $(document).ready(function () {
 		console.log(queryURL);
 	}
 
-	$('img').on('click', function() {
+	function movieImage () {
 
 		var imageSource = $(this).attr('src');
-		$('#largeImage').attr('src', imageSource);
-	})
+		$('#bigImage').attr('src', imageSource);
+		console.log("Test");
+	};
 
 	function movieDescription () {
 
