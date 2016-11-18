@@ -19,19 +19,39 @@
 
 <body>
 
-	<div class="container">
+	
 
 		<header class="head">
 			<nav class="navbar navbar-inverse">
 				<h3 class="title">Featured Presentations</h3>
-				<button type="button" class="btn btn-default navbar-btn navbar-right">Sign in</button>
+				<button type="button" class="btn btn-default navbar-btn navbar-right" data-toggle= "modal" data-target="#signInModal">Sign in</button>
+ 			<div class="modal fade" id="signInModal">
+ 					<div class="modal-dialog">
+ 						<div class="modal-content">
+ 							<div class="modal-header">
+ 								<h3>Login to Google</h3>
+ 							</div>
+							<div class="modal-body">
+ 								<form action="action_page.php">
+ 									Username:<br>
+ 									<input type="text" name="userName" value=""><br>
+ 									Password:
+ 									<input type="text" name="password" value=""><br>
+ 									<input class="btn btn-info" type="submit" value="Submit">
+								</form>
+							</div>
+							<div class="modal-footer"></div>
+						</div>
+ 					</div>
+ 				</div>
+ 				</div>
 			</nav>
 		</header>
 
 		<div class="text">
 		</div>
 
-		
+		<div class="container">
 
 		<div class="row">
 			
@@ -84,7 +104,7 @@
 
 				<div class="row">
 					
-				<button class="btn btn-default navbar-btn" id="submit" data-toggle="modal" data-target="#mymodal">Submit</button>
+				<button class="btn btn-default navbar-btn" id="submit" data-toggle="modal" data-target="#mymodal">Theater Showtimes</button>
 
 				<br>
 
@@ -166,6 +186,7 @@
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 	<script src="assets/javascript/java2.js"></script>
 	<script src="assets/javascript/onConnectAPI.js"></script>
+	<script src="assets/javascript/onConnectAPI2.js"></script>
 
 
 </body>
