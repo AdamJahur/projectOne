@@ -1,6 +1,7 @@
 $(document).ready(function () {
 
 	var movieID = localStorage.getItem('movieID');
+	var moviePoster = localStorage.getItem('movieURL')
 
 	function multiImageFunction () {
 
@@ -19,7 +20,7 @@ $(document).ready(function () {
 
 		$.ajax(request).done(function(response) {
 
-			var largeImage = $('#largeImage');
+			var largeImage = $('#bigImage');
 			largeImage.attr('src', 'https://image.tmdb.org/t/p/w500' + response.backdrops[0].file_path);
 
 			for (i = 0; i < 4; i++) {
@@ -61,7 +62,7 @@ $(document).ready(function () {
 
 			console.log(response);
 
-			var image = ('https://image.tmdb.org/t/p/w500' + response.backdrop_path);
+			var image = ('https://image.tmdb.org/t/p/w500' + moviePoster);
 			var title = response.title;
 			var tagLine = response.tagline;
 			var runtime = ("Runtime: " + response.runtime + " min");
