@@ -11,20 +11,20 @@ $.ajax({url: movies, method: 'GET'})
 		.done(function(response) {
 			console.log(response);
 
-			for (var movie in response)
-			{
-				if (movieTitle == movie.title)
-				{
-					if (movie.showtimes.length > 0)
-					{
-						for(var showtime in movie.showtimes)
-						{
-							var date = new Date(showtime.datetime);
-							showtime.theatre.id or showtime.theatre.name
-						}
-					}
-				}	
-			}
+			//for (var movie in response)
+		//	{
+				//if (movieTitle == movie.title)
+				//{
+				//	if (movie.showtimes.length > 0)
+				//	{
+					//	for(var showtime in movie.showtimes)
+					//	{
+					//		var date = new Date(showtime.datetime);
+						//	showtime.theatre.id or showtime.theatre.name
+					//	}
+				//	}
+				//}	
+			//}
 			
            });
 
