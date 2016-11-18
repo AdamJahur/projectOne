@@ -82,3 +82,9 @@ p {
 button {
 	margin-right: 10px;
 }
+#poster{
+	max-width: 300px;
+	height: 200px;
+	border-color: blue;
+	border-width: 2px;
+}
