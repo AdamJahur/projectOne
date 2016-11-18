@@ -37,16 +37,6 @@ $(document).ready(function () {
 
 				$('.smallImage').append(columnBlock);
 
-<<<<<<< HEAD
-			// 	var imageField = $('#smallImage' + i);
-=======
-				var divField = $('<div class=column>')
-				divField.attr(response.backdrops[i].file_path);	
-				var imageField = $('#smallImage' + i);
-				var imageSource = response.backdrops[i].file_path;
->>>>>>> c556bb2b56311b786fb5fb9cb93cc40c1f7249f4
-
-			// 	imageField.attr('src', 'https://image.tmdb.org/t/p/w500' + imageSource);
 			}
 
 
@@ -55,20 +45,12 @@ $(document).ready(function () {
 		console.log(queryURL);
 	}
 
-<<<<<<< HEAD
 	function movieImage () {
 
 		var imageSource = $(this).attr('src');
 		$('#bigImage').attr('src', imageSource);
 		console.log("Test");
 	};
-=======
-	$('.smallImage').on('click', function() {
-
-		var imageSource = $(this).attr('src');
-		$('#bigImage').attr('src', imageSource);
-	})
->>>>>>> c556bb2b56311b786fb5fb9cb93cc40c1f7249f4
 
 	function movieDescription () {
 
