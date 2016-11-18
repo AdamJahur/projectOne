@@ -25,6 +25,8 @@ $(document).ready(function () {
 
 			for (i = 0; i < 4; i++) {
 
+				var divField = $('<div class=column>')
+				divField.attr(response.backdrops[i].file_path);	
 				var imageField = $('#smallImage' + i);
 				var imageSource = response.backdrops[i].file_path;
 
@@ -37,10 +39,10 @@ $(document).ready(function () {
 		console.log(queryURL);
 	}
 
-	$('img').on('click', function() {
+	$('.smallImage').on('click', function() {
 
 		var imageSource = $(this).attr('src');
-		$('#largeImage').attr('src', imageSource);
+		$('#bigImage').attr('src', imageSource);
 	})
 
 	function movieDescription () {
