@@ -66,8 +66,8 @@ h3, .date-picker, .middle{
 	font-size: 30pt;
 }
 
-img {
-	
+#bigImage {
+	width: 100%;
 }
 
 h5 {
@@ -83,6 +83,7 @@ button {
 	margin-right: 10px;
 }
 
+<<<<<<< HEAD
 #poster{
 	max-width: 300px;
 	height: 200px;
@@ -90,3 +91,13 @@ button {
 	border-width: 2px;
 }
 
+=======
+#moviePoster {
+	padding-right: 30px;
+	width: 200px;
+}
+
+#poster {
+	width: 100%;
+}
+>>>>>>> master

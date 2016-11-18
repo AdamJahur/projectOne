@@ -28,15 +28,12 @@ $(document).ready(function () {
 				var movieID = results[i].id;
 				var imagePoster_link = $('<a href="secondPage.html">');
 
-				imagePoster_link.attr('movie-id', movieID);
-				imagePoster_link.addClass('moviePoster')
-
 				columnBlock.on('click', myFunction);
 				columnBlock.attr('movie-id', movieID);
+				columnBlock.attr('movie-poster', results[i].poster_path)
 
-				
-				// imagePoster.attr('movie-id', movieID);
-				imagePoster.attr('src', 'https://image.tmdb.org/t/p/w500' + results[i].poster_path);
+				var posterURL = 'https://image.tmdb.org/t/p/w500' + results[i].poster_path;
+				imagePoster.attr('src', posterURL);
 
 				selectButton.text("Select Movie");
 				selectButton.attr('movie-id', movieID);
@@ -60,7 +57,9 @@ $(document).ready(function () {
 
 		localStorage.clear();
 		var movieID = $(this).attr('movie-id');
+		var moviePoster = $(this).attr('movie-poster');
 		localStorage.setItem('movieID', movieID);
+		localStorage.setItem('movieURL', moviePoster);
 		console.log(movieID);
 	};
 
