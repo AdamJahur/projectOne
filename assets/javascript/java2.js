@@ -20,10 +20,21 @@ $(document).ready(function () {
 
 		$.ajax(request).done(function(response) {
 
+			console.log(response);
+
 			numImages = 4;
 
-			var largeImage = $('#bigImage');
-			largeImage.attr('src', 'https://image.tmdb.org/t/p/w500' + response.backdrops[0].file_path);
+			if (response.backdrops.length === 0) {
+				var blankImage = $('<img id="bigImage" class="thumbnail" src="http://placehold.it/650x350?text=No+Images">')
+				$('')
+			} else {
+
+				var largeImage = $('#bigImage');
+				largeImage.attr('src', 'https://image.tmdb.org/t/p/w500' + response.backdrops[0].file_path);
+			}
+
+			// var largeImage = $('#bigImage');
+			// largeImage.attr('src', 'https://image.tmdb.org/t/p/w500' + response.backdrops[0].file_path);
 
 			for (i = 0; i < numImages; i++) {
 
