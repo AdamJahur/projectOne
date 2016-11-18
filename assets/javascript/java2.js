@@ -71,6 +71,7 @@ $(document).ready(function () {
 			$('#movieName').html(title);
 			$('#movieDescription').html(overview);
 			$('#runtime').html(runtime);
+			$('#movieTitle').html(title);
 
 			// Testing & Debugging
 				console.log(image);
