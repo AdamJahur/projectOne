@@ -35,11 +35,12 @@ body{
 footer{
 	position: fixed;
 	left: 0px;
-	bottom: -20px;
+	bottom: 0px;
 	width: 100%;
 	font-family: sans-serif;
 	text-align: center;
 	color: white;
+	background-attachment: scroll;
 	font-family: 'Raleway', 'sans-serif'
 }
 .row{
