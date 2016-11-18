@@ -66,8 +66,8 @@ h3, .date-picker, .middle{
 	font-size: 30pt;
 }
 
-img {
-	
+#largeImage {
+	width: 100%;
 }
 
 h5 {
