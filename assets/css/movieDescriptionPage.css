@@ -99,6 +99,15 @@ button {
 	margin-right: 10px;
 }
 
+<<<<<<< HEAD
+#poster{
+	max-width: 300px;
+	height: 200px;
+	border-color: blue;
+	border-width: 2px;
+}
+
+=======
 #moviePoster {
 	padding-right: 30px;
 	width: 200px;
@@ -107,3 +116,4 @@ button {
 #poster {
 	width: 100%;
 }
+>>>>>>> master
