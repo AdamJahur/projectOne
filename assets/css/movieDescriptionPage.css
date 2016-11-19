@@ -2,10 +2,14 @@ body{
 	background: url(../images/gifreel3.jpg);
 	background-repeat: none;
 	background-size: 100%;
+	position: relative;
+	margin: 0;
+	height: 100%;
 }
 .container{
-	padding-bottom: 100px;
-	width: 87%;
+	padding-bottom: 50px;	
+	min-height: 100%;
+	margin-bottom: 50px;
 }
 .head{
 	margin-bottom: 40px;
@@ -22,6 +26,9 @@ body{
 	border-radius: 10%;
 }
 
+.navbar {
+	padding-top: 14px;
+}
 .title{
 	font-family: 'Great Vibes', 'cursive';
 	color: white;
@@ -32,15 +39,15 @@ body{
 	font-weight: bold;
 	margin-right: 50%;
 }
-footer{
-	position: fixed;
-	left: 0px;
-	bottom: -20px;
+.footer{
+	position: absolute;
+	background-color: black;
+	height: 50px;
+	border-radius: 5px;
 	width: 100%;
-	font-family: sans-serif;
 	text-align: center;
-	color: white;
-	font-family: 'Raleway', 'sans-serif'
+	padding-top: 10px;
+	font-family: 'Raleway', 'sans-serif';
 }
 .row{
 	font-family: 'Raleway', 'sans-serif';
@@ -57,6 +64,14 @@ h3, h4, h5{
 }
 h3, .date-picker, .middle{
 	color: blue;
+}
+
+h3 a {
+	font-family: 'Great Vibes', 'cursive';
+	font-size: 30pt;
+	padding-left: 20px;
+	letter-spacing: 3px;
+	color: #337ab7;
 }
 .date-picker, .middle{
 	font-weight: bolder;
@@ -83,15 +98,6 @@ button {
 	margin-right: 10px;
 }
 
-<<<<<<< HEAD
-#poster{
-	max-width: 300px;
-	height: 200px;
-	border-color: blue;
-	border-width: 2px;
-}
-
-=======
 #moviePoster {
 	padding-right: 30px;
 	width: 200px;
@@ -100,4 +106,4 @@ button {
 #poster {
 	width: 100%;
 }
->>>>>>> master
+

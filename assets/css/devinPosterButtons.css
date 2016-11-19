@@ -3,10 +3,16 @@ font-family: 'Great Vibes', cursive;*/
 
 body{
 	background: url(../images/gifreel.jpg);
+	height: 100%;
+	position: relative;
+	margin: 0;
+
 }
 .container {
 	margin-top: 10px;
 	padding-bottom: 50px;
+	min-height: 100%;
+	margin-bottom: 50px;
 }
 
 .description {
@@ -45,14 +51,18 @@ h3{
 	padding-left: 20px;
 	letter-spacing: 3px;
 }
-footer{
-	position: fixed;
-	left: 0px;
-	bottom: -20px;
-	width: 100%;
+.footer{	
+	position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+	border-radius: 5px;
+	padding-top: 10px;
+	height: 50px;
 	font-family: sans-serif;
 	text-align: center;
 	color: white;
+	background-color: black;
 	font-family: 'Raleway', 'sans-serif'
 }
 .selectButton{
