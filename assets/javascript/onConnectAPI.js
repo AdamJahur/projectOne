@@ -5,7 +5,7 @@ $(document).ready(function () {
 	function zipCode () {
 
 		var query = {
-			api_key: "c8j5g22c7auwnc6s39v86ep8",
+			api_key: "gpsby6z4y9kttvza5n2yyqha",
 			zip: "32765",
 			startDate: "2016-11-19"
 		}
