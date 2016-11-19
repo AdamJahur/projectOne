@@ -40,8 +40,6 @@ body{
 .footer{
 	position: absolute;
 	width: 100%;
-	left: 0;
-	margin-top: 50px;
 	border-radius: 5px;
 	padding-top: 15px;
 	height: 60px;
@@ -90,10 +88,6 @@ h3 a {
     border: 1px solid #dddddd;
 }
 
-.column-row {
-	padding-bottom: 50px;
-}
-
 #bigImage {
 	width: 100%;
 }
@@ -119,4 +113,3 @@ button {
 #poster {
 	width: 100%;
 }
-
