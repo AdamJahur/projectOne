@@ -82,10 +82,9 @@ h3 a {
 #userinput {
 	background: white;
     padding: 30px;
-    height: 400px;
+    height: 300px;
     margin: 0 0 40px 0;
-   
-    max-width: 650px;
+   	width: 500px;
     border: 1px solid #dddddd;
 }
 
