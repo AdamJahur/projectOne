@@ -127,33 +127,53 @@
 	</div>			
 </div>
 
-		<div class="column row">
-			<hr>
-			<ul class="tabs" data-tabs id="example-tabs">
-				<li class="tabs-title is-active"><a href="#panel1" aria-selected="true">Description</a></li>
-				<li class="tabs-title"><a href="#panel2">Reviews</a></li>
-				<li class="tabs-title is-active"><a href=#panel3>Recommendations</a></li>
-			</ul>
-			<div class="tabs-content" data-tabs-content="example-tabs">
-				<div class="tabs-panel is-active" id="panel1">
-					<h4>Movie Description</h4>
-					<div class="media-object stack-for-small">
-						<div id="moviePoster" class="media-object-section">
-							<img id="poster" class="thumbnail" src="http://placehold.it/200x200">
-						</div>
-						<div class="media-object-section">
-							<h5 id="movieName"></h5>
-							<p id="movieDescription"></p>
-							<p id="actors"></p>
-							<p id="runtime"></p>
-						</div>
-					</div>
-				</div>
-				
-			</div>
-		</div>
-</div>
+		  <div class="column-row">
+      <hr>
+      <ul class="tabs" data-tabs id="example-tabs">
+        <li class="tabs-title is-active"><a href="#panel1" aria-selected="true">Description</a></li>
+        <li class="tabs-title"><a href="#panel2">Trailer</a></li>
+      </ul>
 
+
+      <div class="tabs-content" data-tabs-content="example-tabs">
+        <div class="tabs-panel is-active" id="panel1">
+          <h4>Description</h4>
+          <div class="media-object stack-for-small">
+
+
+
+
+            <div id="moviePoster" class="media-object-section">
+              <img id="poster" class="thumbnail" src="http://placehold.it/200x200">
+            </div>
+
+
+            <div class="media-object-section">
+            <h5 id="movieName"></h5>
+              <p id="movieDescription"></p>
+              <p id="actors"></p>
+              <p id="runtime"></p>
+
+            </div>
+          </div>    
+       </div>
+
+
+        <div class="tabs-panel" id="panel2">
+          <div class="row large-12">
+            <div class="column">
+              <div class="trailer"></div>
+
+              
+              
+              <p>TRAILER SHOULD GO HERE AND ANY DESCRIPTION/RATING.</p>
+      
+            </div>
+     
+          </div>
+        </div>
+      </div>
+    </div>
 		<footer class="footer">
 			
 				<p style="color: white">&copy; The Greatest Group Ever</p>
@@ -169,6 +189,11 @@
 	<script src="assets/javascript/onConnectAPI.js"></script>
 	<!-- <script src="assets/javascript/onConnectAPI2.js"></script> -->
 
+	 <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+ <script src="http://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.js"></script>
+<script>
+      $(document).foundation();
+    </script>
 
 </body>
 </html>
