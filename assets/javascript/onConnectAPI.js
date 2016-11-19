@@ -39,12 +39,13 @@ $(document).ready(function () {
 						var timeButton = $('<button type="button" class="btn btn-warning">');
 						var time = response[0].showtimes[i].dateTime;
 
-						timeButton.attr('movie-time', time);
-						timeButton.text("Movie Time");
 
 						$('.movieTheaterOne').append(timeButton);
 
-						var timeString = 
+						var formatTime = time.substring(11, 16);
+
+						timeButton.attr('movie-time', time);
+						timeButton.text(formatTime);
 
 					}
 
