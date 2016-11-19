@@ -21,15 +21,31 @@ $(document).ready(function () {
 
 		$.ajax(request).done(function(response) {
 
-			// console.log(response[0].title);
+			console.log(response);
+			
+			var theatreName = response[0].showtimes[0].theatre.name;
+
+			$('#theatreName').text(theatreName);
+			// console.log(theatreName);
 
 			for (i = 0; i < response.length; i++) {
 				
-				if(response[i].title === "Doctor Strange") {
-					console.log(response[i].title);
-				}
-			}
+				if(response[i].title === movieTitle) {
 
+					console.log(response[i].title);
+
+					for (i = 0; response[0].showtimes.length; i++) {
+
+						console.log(response[0].showtimes[i].dateTime);
+						var timeButton = $('<button type="button" class="btn btn-warning">');
+						timeButton.attr('movie-time', response[0].showtimes[i].dateTime);	
+						timeButton.text("Movie Time");
+						$('.movieTheaterOne').append(timeButton);
+
+					}
+
+				}	
+			}
 		})
 	}
 
