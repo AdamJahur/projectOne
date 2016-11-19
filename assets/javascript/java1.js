@@ -24,17 +24,21 @@ $(document).ready(function () {
 				
 				var columnBlock = $('<div class="col-md-2">');
 				var imagePoster = $('<img>');
-				var selectButton = $('<a href="secondPage.html"><button class="selectButton"></button></a>');
-
+				var selectButton = $('<a href="secondPage.html"><button class="selectButton" onclick="myFunction"></button></a>');
 				var movieID = results[i].id;
-				
-				imagePoster.attr('movie-id', movieID);
-				imagePoster.attr('src', 'https://image.tmdb.org/t/p/w500' + results[i].poster_path);
+				var imagePoster_link = $('<a href="secondPage.html">');
+
+				columnBlock.on('click', myFunction);
+				columnBlock.attr('movie-id', movieID);
+				columnBlock.attr('movie-poster', results[i].poster_path)
+
+				var posterURL = 'https://image.tmdb.org/t/p/w500' + results[i].poster_path;
+				imagePoster.attr('src', posterURL);
 
 				selectButton.text("Select Movie");
 				selectButton.attr('movie-id', movieID);
 
-				var imagePoster_link = $('<a href="secondPage.html">');
+
 				imagePoster_link.append(imagePoster);
 				columnBlock.append(imagePoster_link);
 				columnBlock.append(selectButton);
@@ -48,6 +52,16 @@ $(document).ready(function () {
 	};
 
 	imagePosters();
+
+	function myFunction () {
+
+		localStorage.clear();
+		var movieID = $(this).attr('movie-id');
+		var moviePoster = $(this).attr('movie-poster');
+		localStorage.setItem('movieID', movieID);
+		localStorage.setItem('movieURL', moviePoster);
+		console.log(movieID);
+	};
 
 });
 

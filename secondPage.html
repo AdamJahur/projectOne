@@ -19,42 +19,50 @@
 
 <body>
 
-	<div class="container">
+	
 
 		<header class="head">
 			<nav class="navbar navbar-inverse">
-				<h3 class="title">Featured Presentations</h3>
-				<button type="button" class="btn btn-default navbar-btn navbar-right">Sign in</button>
+				<h3><a href="firstPage.html" style="text-decoration:none">Featured Presentations</a></h3>
+				<button type="button" class="btn btn-default navbar-btn navbar-right" data-toggle= "modal" data-target="#signInModal">Sign in</button>
+ 			<div class="modal fade" id="signInModal">
+ 					<div class="modal-dialog">
+ 						<div class="modal-content">
+ 							<div class="modal-header">
+ 								<h3>Login to Google</h3>
+ 							</div>
+							<div class="modal-body">
+ 								<form action="action_page.php">
+ 									Username:<br>
+ 									<input type="text" name="userName" value=""><br>
+ 									Password:
+ 									<input type="text" name="password" value=""><br>
+ 									<input class="btn btn-info" type="submit" value="Submit">
+								</form>
+							</div>
+							<div class="modal-footer"></div>
+						</div>
+ 					</div>
+ 				</div>
+ 				</div>
 			</nav>
 		</header>
 
 		<div class="text">
 		</div>
 
-		
+		<div class="container">
 
 		<div class="row">
 			
-			<div class="medium-6 columns">
+			<!-- Movie Images -->
 
-				<img id="largeImage" class="thumbnail" src="http://placehold.it/650x350">
-				<div class="row small-up-4">
+			<div id="movieImages" class="medium-6 columns">
 
-					<div class="column">
-						<img id="smallImage0" class="thumbnail" src="http://placehold.it/250x200">
-					</div>
+				<img id="bigImage" class="thumbnail">
+				<div class="row small-up-4 smallImage">
 
-					<div class="column">
-						<img id="smallImage1" class="thumbnail" src="http://placehold.it/250x200">
-					</div>
 
-					<div class="column">
-						<img id="smallImage2" class="thumbnail" src="http://placehold.it/250x200">
-					</div>
-
-					<div class="column">
-						<img id="smallImage3" class="thumbnail" src="http://placehold.it/250x200">
-					</div>
 				</div>
 			</div>
 
@@ -62,7 +70,7 @@
 
 			<div class="medium-6 large-5 columns">
 
-				<h3>Doctor Strange</h3>				
+				<h3 id="movieTitle"></h3>				
 
 				<div class="row">
 					<div class="small-3 columns">
@@ -84,7 +92,7 @@
 
 				<div class="row">
 					
-				<button class="btn btn-default navbar-btn" id="submit" data-toggle="modal" data-target="#mymodal">Submit</button>
+				<button class="btn btn-default navbar-btn" id="submit" data-toggle="modal" data-target="#mymodal">Theater Showtimes</button>
 
 				<br>
 
@@ -101,9 +109,21 @@
 							</div>
 							<div class="modal-body">
 									<form>
- 									 <input type="radio" name="movie" value="thea1" checked> Theatre 1<br>
- 									 <input type="radio" name="movie" value="thea2"> Theatre 2<br>
-								     <input type="radio" name="movie" value="thea3"> Theatre 3
+ 									<div class="movieTheaterOne">
+									<h5>Theater Name</h5>
+									<p>Theater Location</p>
+									<button type="button" class="btn btn-warning">Warning</button><button type="button" class="btn btn-warning">Warning</button><button type="button" class="btn btn-warning">Warning</button><button type="button" class="btn btn-warning">Warning</button><br><br>
+ 									</div>
+ 									 <div class="movieTheaterTwo">
+									<h5>Theater Name</h5>
+									<p>Theater Location</p>
+									<button type="button" class="btn btn-warning">Warning</button><button type="button" class="btn btn-warning">Warning</button><button type="button" class="btn btn-warning">Warning</button><button type="button" class="btn btn-warning">Warning</button><br><br>
+									</div>
+								    <div class="movieTheaterThree">
+									<h5>Theater Name</h5>
+									<p>Theater Location</p>
+									<button type="button" class="btn btn-warning">Warning</button><button type="button" class="btn btn-warning">Warning</button><button type="button" class="btn btn-warning">Warning</button><button type="button" class="btn btn-warning">Warning</button><br><br>
+									</div>
 								</form>
 							</div>
 							<div class="modal-footer"></div>
@@ -126,7 +146,7 @@
 				<div class="tabs-panel is-active" id="panel1">
 					<h4>Movie Description</h4>
 					<div class="media-object stack-for-small">
-						<div class="media-object-section">
+						<div id="moviePoster" class="media-object-section">
 							<img id="poster" class="thumbnail" src="http://placehold.it/200x200">
 						</div>
 						<div class="media-object-section">
@@ -136,24 +156,26 @@
 							<p id="runtime"></p>
 						</div>
 					</div>
-
 				</div>
+				
 			</div>
 		</div>
+</div>
 
-		<footer>
-			<nav id="footer" class="navbar navbar-inverse">
-				<p>&copy; The Greatest Group Ever</p>
-			</nav>
+		<footer class="footer">
+			
+				<p style="color: white">&copy; The Greatest Group Ever</p>
+			
 		</footer>
-	</div>
+	
 
 	<!-- Javascript -->
 	<script src="https://code.jquery.com/jquery-3.1.1.js" integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA=" crossorigin="anonymous"></script>
 	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 	<script src="assets/javascript/java2.js"></script>
-
+	<script src="assets/javascript/onConnectAPI.js"></script>
+	<script src="assets/javascript/onConnectAPI2.js"></script>
 
 
 </body>

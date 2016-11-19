@@ -22,10 +22,30 @@
 
 			<nav class="navbar navbar-inverse">
 
-				<h3>Featured Presentations</h3>
-				<button type="button" class="btn btn-default navbar-btn navbar-right">Sign in</button>
+				<h3><a href="firstPage.html" style="text-decoration:none">Featured Presentations</a></h3>
+				<button type="button" class="btn btn-default navbar-btn navbar-right" data-toggle= "modal" data-target="#signInModal">Sign in</button>
+				<div class="modal fade" id="signInModal">
+					<div class="modal-dialog">
+						<div class="modal-content">
+							<div class="modal-header">
+								<h3>Login to Google</h3>
+							</div>
+							<div class="modal-body">
+								<form action="action_page.php">
+									Username:<br>
+									<input type="text" name="userName" value=""><br>
+									Password:
+									<input type="text" name="password" value=""><br>
+									<input class="btn btn-info" type="submit" value="Submit">
+								</form>
+							</div>
+							<div class="modal-footer"></div>
+						</div>
+					</div>
+				</div>
+				</div>
 			</nav>
-		</header>	
+		</header>
 	</div>
 
 	<div class="container">
@@ -36,16 +56,17 @@
 	<br>
 	</div>
 
-	<footer>
+	<footer class="footer">
 
-		<nav id="footer" class="navbar navbar-inverse">
+		
 
 			<p>&copy; The Greatest Group Ever</p>
-		</nav>
+	
 	</footer>
 
 	<script src="https://code.jquery.com/jquery-3.1.1.js" integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA=" crossorigin="anonymous"></script>
 	<script src="assets/javascript/java1.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
 </body>
 </html>
