@@ -79,6 +79,15 @@ h3 a {
 	font-family: 'Great Vibes', 'cursive';
 	font-size: 30pt;
 }
+#userinput {
+	background: white;
+    padding: 30px;
+    height: 400px;
+    margin: 0 0 40px 0;
+   
+    max-width: 650px;
+    border: 1px solid #dddddd;
+}
 
 #bigImage {
 	width: 100%;
