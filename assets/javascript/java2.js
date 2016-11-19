@@ -94,13 +94,6 @@ $(document).ready(function () {
 			$('#runtime').html(runtime);
 			$('#movieTitle').html(title);
 
-			// Testing & Debugging
-				console.log(image);
-				console.log(title);
-				console.log(tagLine);
-				console.log(runtime);
-				console.log(overview);
-		
 		})
 	}
 
