@@ -32,15 +32,19 @@ $(document).ready(function () {
 				
 				if(response[i].title === movieTitle) {
 
-					console.log(response[i].title);
+					// console.log(response[i].title);
 
 					for (i = 0; response[0].showtimes.length; i++) {
 
-						console.log(response[0].showtimes[i].dateTime);
 						var timeButton = $('<button type="button" class="btn btn-warning">');
-						timeButton.attr('movie-time', response[0].showtimes[i].dateTime);	
+						var time = response[0].showtimes[i].dateTime;
+
+						timeButton.attr('movie-time', time);
 						timeButton.text("Movie Time");
+
 						$('.movieTheaterOne').append(timeButton);
+
+						var timeString = 
 
 					}
 
