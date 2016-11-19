@@ -88,6 +88,12 @@ $(document).ready(function () {
 	multiImageFunction();
 	movieDescription();
 
+//  pop-up calendar function
+	$(function (){
+	$("#date-picker").datepicker();
+
+});
+
 	// Testing & Debugging
 	
 
