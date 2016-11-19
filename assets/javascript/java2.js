@@ -5,8 +5,6 @@ $(document).ready(function () {
 
 	function multiImageFunction () {
 
-		// var movieID = "284052";
-
 		var query = {
 			api_key: "0735005732556ad68ab1353886fe6517",
 		}
@@ -20,8 +18,6 @@ $(document).ready(function () {
 
 		$.ajax(request).done(function(response) {
 
-			console.log(response);
-
 			numImages = 4;
 
 			if (response.backdrops.length === 0) {
@@ -32,9 +28,6 @@ $(document).ready(function () {
 				var largeImage = $('#bigImage');
 				largeImage.attr('src', 'https://image.tmdb.org/t/p/w500' + response.backdrops[0].file_path);
 			}
-
-			// var largeImage = $('#bigImage');
-			// largeImage.attr('src', 'https://image.tmdb.org/t/p/w500' + response.backdrops[0].file_path);
 
 			for (i = 0; i < numImages; i++) {
 
@@ -53,7 +46,6 @@ $(document).ready(function () {
 
 		});
 
-		console.log(queryURL);
 	}
 
 	function movieImage () {
@@ -64,8 +56,6 @@ $(document).ready(function () {
 	};
 
 	function movieDescription () {
-
-		// var movieID = "284052";
 
 		var query = {
 			api_key: "0735005732556ad68ab1353886fe6517",
@@ -79,8 +69,6 @@ $(document).ready(function () {
 		}
 
 		$.ajax(request).done(function(response) {
-
-			console.log(response);
 
 			var image = ('https://image.tmdb.org/t/p/w500' + moviePoster);
 			var title = response.title;
