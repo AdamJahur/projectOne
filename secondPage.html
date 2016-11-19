@@ -15,6 +15,10 @@
 	<link rel="stylesheet" href="http://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.min.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/movieDescriptionPage.css">
 
+	<!-- Google Calendar -->
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <meta name="google-signin-client_id" content="47377272840-7uqi8r0vtaqgof9cdnm4mj1eri158s28.apps.googleusercontent.com">
+
 </head>
 
 <body>
@@ -67,8 +71,9 @@
 			</div>
 
 			<!-- User Input -->
-
+			
 			<div class="medium-6 large-5 columns">
+			<div id="userinput">
 
 				<h3 id="movieTitle"></h3>				
 
@@ -89,19 +94,14 @@
 						<input type="text" id="middle-label" placeholder="12345">
 					</div>
 				</div>
-
-				<div class="row">
-					
 				<button class="btn btn-default navbar-btn" id="submit" data-toggle="modal" data-target="#mymodal">Theater Showtimes</button>
 
-				<br>
-
 				<button class="btn btn-default navbar-btn" id="addCal">Add to Calendar</button>
+								
+				<a href="firstPage.html"> <button class="btn btn-default navbar-btn" id="back">Back to Movies</button></a>
+						</div>	
+				<div class="row">
 				
-				<a href="firstPage.html">
-				<button class="btn btn-default navbar-btn" id="back">Back to Movies</button></a>
-
-				<!-- Showtime Modale -->
 
 				<div class="modal fade" id="mymodal">
 					<div class="modal-dialog">
