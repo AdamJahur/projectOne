@@ -5,14 +5,14 @@ $(document).ready(function () {
 	function zipCode () {
 
 		var query = {
-			api_key: "gpsby6z4y9kttvza5n2yyqha",
+			api_key: "6guksevvakb73kx992znf3pv",
 			zip: "32765",
-			startDate: "2016-11-19"
+			startDate: "2016-11-20"
 		}
 
 		var queryURL = "http://data.tmsapi.com/v1.1/movies/showings?" + $.param(query);
 
-		console.log(queryURL);
+		// console.log(queryURL);
 
 		var request = {
 			url: queryURL,
@@ -21,7 +21,7 @@ $(document).ready(function () {
 
 		$.ajax(request).done(function(response) {
 
-			console.log(response);
+			// console.log(response);
 			
 			var theatreName = response[0].showtimes[0].theatre.name;
 
