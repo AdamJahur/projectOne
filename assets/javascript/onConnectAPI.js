@@ -36,7 +36,8 @@ $(document).ready(function () {
 					var movie = response[i]
 
 					//Theatre Name
-					
+
+					$('#movieTimes').empty();
 					$('#theatreName').empty();
 
 					var theatreName = movie.showtimes[0].theatre.name;
@@ -45,10 +46,11 @@ $(document).ready(function () {
 					for (i = 0; movie.showtimes.length; i++) {
 
 						// Time
+
 						var timeButton = $('<button type="button" class="btn btn-warning">');
 						var time = movie.showtimes[i].dateTime;
 
-						$('.movieTheaterOne').append(timeButton);
+						$('#movieTimes').append(timeButton);
 
 						var formatTime = time.substring(11, 16);
 
