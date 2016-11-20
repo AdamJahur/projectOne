@@ -31,16 +31,24 @@ $(document).ready(function () {
 				var imageBlock = $('<img>');
 				var movieTitle = $('<h5>');
 
+				if (results[i].backdrop_path === null) {
+
+					imageBlock.attr("src", "http://placehold.it/246.68x138.63?text=No+Image");
+	
+				} else {
+
+					imageBlock.attr("src", "https://image.tmdb.org/t/p/w500" + results[i].backdrop_path);
+
+				}
+
 				movieTitle.addClass("recoTab");
 				movieTitle.text(results[i].title);
-				imageBlock.attr("src", "https://image.tmdb.org/t/p/w500" + results[i].backdrop_path);
-
+	
 				posterBlock.attr("movie-name", results[i].title);
 				posterBlock.append(imageBlock);
 				posterBlock.append(movieTitle);
-
+	
 				$('#recoPosters').append(posterBlock);
-
 			}
 
 
