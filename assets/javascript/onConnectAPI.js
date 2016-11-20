@@ -27,23 +27,26 @@ $(document).ready(function () {
 		$.ajax(request).done(function(response) {
 
 			console.log(response);
+
 			
-			var theatreName = response[0].showtimes[0].theatre.name;
-
-			$('#theatreName').text(theatreName);
-			// console.log(theatreName);
-
 			for (i = 0; i < response.length; i++) {
 				
 				if(response[i].title === movieTitle) {
 
-					// console.log(response[i].title);
+					var movie = response[i]
 
-					for (i = 0; response[0].showtimes.length; i++) {
+					//Theatre Name
+					
+					$('#theatreName').empty();
 
+					var theatreName = movie.showtimes[0].theatre.name;
+					$('#theatreName').append(theatreName);
+
+					for (i = 0; movie.showtimes.length; i++) {
+
+						// Time
 						var timeButton = $('<button type="button" class="btn btn-warning">');
-						var time = response[0].showtimes[i].dateTime;
-
+						var time = movie.showtimes[i].dateTime;
 
 						$('.movieTheaterOne').append(timeButton);
 
@@ -72,7 +75,6 @@ $(document).ready(function () {
 //console.log(times);
 
 					}
-
 				}	
 			}
 		})

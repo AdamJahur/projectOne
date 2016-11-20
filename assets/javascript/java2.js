@@ -1,7 +1,7 @@
 $(document).ready(function () {
 
 	var movieID = localStorage.getItem('movieID');
-	var moviePoster = localStorage.getItem('movieURL')
+	var moviePoster = localStorage.getItem('movieURL');
 
 	function multiImageFunction () {
 
