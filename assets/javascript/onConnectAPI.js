@@ -2,12 +2,9 @@ $(document).ready(function () {
 
 		var movieTitle = localStorage.getItem('movieTitle');
 
-		console.log(movieTitle);
-
 	function zipCode () {
 
 		var code = $('#middle-label').val();
-		console.log(code);
 
 		var query = {
 			api_key: "c8j5g22c7auwnc6s39v86ep8",
