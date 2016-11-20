@@ -15,7 +15,7 @@ $(document).ready(function () {
 			method: 'GET'
 		}
 
-		console.log(queryURL);
+		// console.log(queryURL);
 
 		$.ajax(request).done(function(response) {
 

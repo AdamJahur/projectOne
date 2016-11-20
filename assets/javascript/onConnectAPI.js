@@ -4,10 +4,13 @@ $(document).ready(function () {
 
 	function zipCode () {
 
+		var code = $('#middle-label').val();
+		console.log(code);
+
 		var query = {
-			api_key: "6guksevvakb73kx992znf3pv",
-			zip: "32765",
-			startDate: "2016-11-20"
+			api_key: "c8j5g22c7auwnc6s39v86ep8",
+			zip: code,
+			startDate: "2016-11-21"
 		}
 
 		var queryURL = "http://data.tmsapi.com/v1.1/movies/showings?" + $.param(query);
@@ -46,6 +49,8 @@ $(document).ready(function () {
 
 						timeButton.attr('movie-time', time);
 						timeButton.text(formatTime);
+
+
 						//for (formatTime) {
 						//	var parts = times[formatTime].split(':'),
 							//hour = parts[0],
@@ -71,6 +76,7 @@ $(document).ready(function () {
 		})
 	}
 
-	zipCode();
+	$('#submit').on('click', zipCode);
+
 })
 
