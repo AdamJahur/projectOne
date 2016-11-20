@@ -23,7 +23,7 @@ $(document).ready(function () {
 			var results = response.results;
 			var numPosters = 4;
 
-			console.log(results);
+			// console.log(results);
 
 			for (i = 0; i < numPosters; i++) {
 

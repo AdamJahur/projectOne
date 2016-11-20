@@ -1,6 +1,8 @@
 $(document).ready(function () {
 
-	var movieTitle = "Doctor Strange";
+		var movieTitle = localStorage.getItem('movieTitle');
+
+		console.log(movieTitle);
 
 	function zipCode () {
 
@@ -24,7 +26,7 @@ $(document).ready(function () {
 
 		$.ajax(request).done(function(response) {
 
-			// console.log(response);
+			console.log(response);
 			
 			var theatreName = response[0].showtimes[0].theatre.name;
 
