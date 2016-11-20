@@ -43,7 +43,7 @@ $(document).ready(function () {
 
 				movieTitle.addClass("recoTab");
 				movieTitle.text(results[i].title);
-	
+				
 				posterBlock.attr("movie-name", results[i].title);
 				posterBlock.append(imageBlock);
 				posterBlock.append(movieTitle);
