@@ -88,6 +88,41 @@ $(document).ready(function () {
 	multiImageFunction();
 	movieDescription();
 
+	//trailer
+
+	function trailer () {
+
+		var query = {
+			api_key: "0735005732556ad68ab1353886fe6517",
+		}
+
+		var queryURL = "https://api.themoviedb.org/3/movie/" + movieID + "/videos" +  "?" + $.param(query) + "&language=en-US";
+
+		var request = {
+			url: queryURL,
+			method: 'GET'
+		}
+		
+
+		console.log("url", queryURL);
+
+		$.ajax(request).done(function(response) {
+
+			console.log("test", response);
+			
+			var results = response.results[i].key;
+			console.log(results);
+
+				var trailerlink = ('https://www.youtube.com/embed/' + results);
+				
+				$("#trailerkey").attr('width="560" height="315" src=', trailerlink);
+				console.log("link", trailerlink);
+
+		})
+	
+}
+	trailer();
+
 //  pop-up calendar function
 	$(function (){
 	$("#date-picker").datepicker();
