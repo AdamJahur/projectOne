@@ -8,7 +8,7 @@ $(document).ready(function () {
 
 		var date = $('#date').val();
 
-		console.log(date);
+		//console.log(date);
 
 		var query = {
 			api_key: "c8j5g22c7auwnc6s39v86ep8",
