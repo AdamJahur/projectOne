@@ -45,7 +45,9 @@ $(document).ready(function () {
 					$('#theatreName').append(theatreName);
 
 					var actors = movie.topCast;
-					$('#actors').append(actors);
+					$('#actors').append(actors + " ");
+
+					
 
 					for (i = 0; movie.showtimes.length; i++) {
 
