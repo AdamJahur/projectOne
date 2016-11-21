@@ -130,12 +130,6 @@ $(document).ready(function () {
 }
 	trailer();
 
-//  pop-up calendar function
-	$(function (){
-	$("#date-picker").datepicker();
-
-});
-
 
 
 
