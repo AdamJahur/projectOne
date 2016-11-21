@@ -31,6 +31,7 @@ $(document).ready(function () {
 				columnBlock.on('click', myFunction);
 				columnBlock.attr('movie-id', movieID);
 				columnBlock.attr('movie-poster', results[i].poster_path)
+				columnBlock.attr('movie-title', results[i].title);
 
 				var posterURL = 'https://image.tmdb.org/t/p/w500' + results[i].poster_path;
 				imagePoster.attr('src', posterURL);
@@ -58,8 +59,11 @@ $(document).ready(function () {
 		localStorage.clear();
 		var movieID = $(this).attr('movie-id');
 		var moviePoster = $(this).attr('movie-poster');
+		var movieTitle = $(this).attr('movie-title');
+
 		localStorage.setItem('movieID', movieID);
 		localStorage.setItem('movieURL', moviePoster);
+		localStorage.setItem('movieTitle', movieTitle);
 		console.log(movieID);
 	};
 

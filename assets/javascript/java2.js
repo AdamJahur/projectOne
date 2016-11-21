@@ -1,7 +1,7 @@
 $(document).ready(function () {
 
 	var movieID = localStorage.getItem('movieID');
-	var moviePoster = localStorage.getItem('movieURL')
+	var moviePoster = localStorage.getItem('movieURL');
 
 	function multiImageFunction () {
 
@@ -19,6 +19,8 @@ $(document).ready(function () {
 		$.ajax(request).done(function(response) {
 
 			numImages = 4;
+
+			// console.log(response);
 
 			if (response.backdrops.length === 0) {
 				var blankImage = $('<img id="bigImage" class="thumbnail" src="http://placehold.it/650x350?text=No+Images">')
@@ -52,7 +54,6 @@ $(document).ready(function () {
 
 		var imageSource = $(this).attr('src');
 		$('#bigImage').attr('src', imageSource);
-		console.log("Test");
 	};
 
 	function movieDescription () {
@@ -87,12 +88,6 @@ $(document).ready(function () {
 
 	multiImageFunction();
 	movieDescription();
-
-//  pop-up calendar function
-	$(function (){
-	$("#date-picker").datepicker();
-
-});
 
 	// Testing & Debugging
 	

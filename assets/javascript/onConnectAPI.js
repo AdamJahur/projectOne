@@ -1,13 +1,19 @@
 $(document).ready(function () {
 
-	var movieTitle = "Doctor Strange";
+		var movieTitle = localStorage.getItem('movieTitle');
 
 	function zipCode () {
 
+		var code = $('#middle-label').val();
+
+		var date = $('#date').val();
+
+		console.log(date);
+
 		var query = {
-			api_key: "6guksevvakb73kx992znf3pv",
-			zip: "32765",
-			startDate: "2016-11-20"
+			api_key: "c8j5g22c7auwnc6s39v86ep8",
+			zip: code,
+			startDate: date
 		}
 
 		var queryURL = "http://data.tmsapi.com/v1.1/movies/showings?" + $.param(query);
@@ -22,30 +28,37 @@ $(document).ready(function () {
 		$.ajax(request).done(function(response) {
 
 			console.log(response);
+
 			
-			var theatreName = response[0].showtimes[0].theatre.name;
-
-			$('#theatreName').text(theatreName);
-			// console.log(theatreName);
-
 			for (i = 0; i < response.length; i++) {
 				
 				if(response[i].title === movieTitle) {
 
-					// console.log(response[i].title);
+					var movie = response[i]
 
-					for (i = 0; response[0].showtimes.length; i++) {
+					//Theatre Name
+
+					$('#movieTimes').empty();
+					$('#theatreName').empty();
+
+					var theatreName = movie.showtimes[0].theatre.name;
+					$('#theatreName').append(theatreName);
+
+					for (i = 0; movie.showtimes.length; i++) {
+
+						// Time
 
 						var timeButton = $('<button type="button" class="btn btn-warning">');
-						var time = response[0].showtimes[i].dateTime;
+						var time = movie.showtimes[i].dateTime;
 
-
-						$('.movieTheaterOne').append(timeButton);
+						$('#movieTimes').append(timeButton);
 
 						var formatTime = time.substring(11, 16);
 
 						timeButton.attr('movie-time', time);
 						timeButton.text(formatTime);
+
+
 						//for (formatTime) {
 						//	var parts = times[formatTime].split(':'),
 							//hour = parts[0],
@@ -65,12 +78,13 @@ $(document).ready(function () {
 //console.log(times);
 
 					}
-
 				}	
 			}
 		})
 	}
 
-	zipCode();
+
+	$('#submit').on('click', zipCode);
+
 })
 
