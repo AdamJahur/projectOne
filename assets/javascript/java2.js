@@ -110,13 +110,18 @@ $(document).ready(function () {
 
 			console.log("test", response);
 			
-			var results = response.results[i].key;
-			console.log(results);
+			var data = response.results[i].key;
+			console.log(data);
 
-				var trailerlink = ('https://www.youtube.com/embed/' + results);
-				
-				$("#trailerkey").attr('width="560" height="315" src=', trailerlink);
-				console.log("link", trailerlink);
+			// for (i = 0; i < data.length; i++) {
+			
+			
+			var trailerlink = ('https://www.youtube.com/embed/' + data);
+			$("#trailerkey").attr('width="560" height="315" src=', trailerlink);
+				console.log("trailer link", trailerlink);
+
+			// }
+
 
 		})
 	
