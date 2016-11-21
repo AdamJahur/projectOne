@@ -8,7 +8,7 @@ $(document).ready(function () {
 
 		var date = $('#date').val();
 
-		console.log(date);
+		//console.log(date);
 
 		var query = {
 			api_key: "c8j5g22c7auwnc6s39v86ep8",
@@ -43,6 +43,9 @@ $(document).ready(function () {
 
 					var theatreName = movie.showtimes[0].theatre.name;
 					$('#theatreName').append(theatreName);
+
+					var actors = movie.topCast;
+					$('#actors').append(actors);
 
 					for (i = 0; movie.showtimes.length; i++) {
 
