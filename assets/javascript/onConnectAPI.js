@@ -27,6 +27,8 @@ $(document).ready(function () {
 
 		$.ajax(request).done(function(response) {
 
+			console.log(response);
+
 			
 			for (i = 0; i < response.length; i++) {
 				
