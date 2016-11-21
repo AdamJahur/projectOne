@@ -115,14 +115,21 @@ $(document).ready(function () {
 			var data = response.results[0].key;
 			console.log(data);
 
-			// for (i = 0; i < data.length; i++) {
 			
-			
+			if (response.results[0].key) {
+
+
 			var trailerlink = ('https://www.youtube.com/embed/' + data);
 			$(".trailer").attr('data', trailerlink);
 				console.log("trailer link", trailerlink);
+}
+				else {
 
-			// }
+					$(".notrailer").html('<p>No Trailer Available.</p>');
+
+			}
+
+		
 
 
 		})
