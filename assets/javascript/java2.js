@@ -54,7 +54,6 @@ $(document).ready(function () {
 
 		var imageSource = $(this).attr('src');
 		$('#bigImage').attr('src', imageSource);
-		console.log("Test");
 	};
 
 	function movieDescription () {
@@ -92,9 +91,11 @@ $(document).ready(function () {
 
 //  pop-up calendar function
 	$(function (){
-	$("#date-picker").datepicker();
-
-});
+		
+		$("#date-picker").datepicker();
+		$("#date-picker").formatDate("yy-mm-dd");
+	
+	});
 
 	// Testing & Debugging
 	

@@ -6,6 +6,10 @@ $(document).ready(function () {
 
 		var code = $('#middle-label').val();
 
+		var date = $('#date-picker').val();
+
+		console.log(date);
+
 		var query = {
 			api_key: "c8j5g22c7auwnc6s39v86ep8",
 			zip: code,
@@ -78,6 +82,7 @@ $(document).ready(function () {
 			}
 		})
 	}
+
 
 	$('#submit').on('click', zipCode);
 
