@@ -112,17 +112,24 @@ $(document).ready(function () {
 
 			console.log("test", response);
 			
-			var data = response.results[i].key;
+			var data = response.results[0].key;
 			console.log(data);
 
-			// for (i = 0; i < data.length; i++) {
 			
-			
-			var trailerlink = ('https://www.youtube.com/embed/' + data);
-			$("#trailerkey").attr('width="560" height="315" src=', trailerlink);
-				console.log("trailer link", trailerlink);
+			if (response.results[0].key) {
 
-			// }
+
+			var trailerlink = ('https://www.youtube.com/embed/' + data);
+			$(".trailer").attr('data', trailerlink);
+				console.log("trailer link", trailerlink);
+}
+				else {
+
+					$(".notrailer").html('<p>No Trailer Available.</p>');
+
+			}
+
+		
 
 
 		})
