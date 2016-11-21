@@ -125,3 +125,12 @@ button {
 	margin-bottom: 10px;
 	padding-left: 10px;
 }
+
+.recoTab {
+	text-align: center;
+	padding-top: 10px;
+}
+
+h4 {
+	color: blue;
+}

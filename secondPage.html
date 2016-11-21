@@ -74,33 +74,40 @@
 			<!-- User Input -->
 			
 			<div class="medium-6 large-5 columns">
-			<div id="userinput">
+			
+				<div id="userinput">
 
-				<h3 id="movieTitle"></h3>				
+					<h3 id="movieTitle"></h3>				
 
-				<div class="row">
-					<div class="small-3 columns">
-						<label for="middle-label" class="middle">Select Date: </label>
-					</div>
-					<div class="small-9 columns">
-						<input type="text" id="date-picker" placeholder="01/01/2016">
-					</div>
-				</div>
+					<div class="row">
 
-				<div class="row">
-					<div class="small-3 columns">
-						<label for="middle-label" class="date-picker">Zip Code: </label>
-					</div>
-					<div class="small-9 columns">
-						<input type="text" id="middle-label" placeholder="12345">
-					</div>
-				</div>
-				<button class="btn btn-default navbar-btn" id="submit" data-toggle="modal" data-target="#mymodal">Theater Showtimes</button>
+						<div class="small-3 columns">
+							<label for="middle-label" class="middle">Select Date: </label>
+						</div>
 
-				<a href="quickstart.html"><button class="btn btn-default navbar-btn" id="addCal">Add to Calendar</button></a>
+						<div class="small-9 columns">
+							<input type="date" id="date">
+						</div>
+					</div>
+
+					<div class="row">
+	
+						<div class="small-3 columns">
+							<label for="middle-label" class="date-picker">Zip Code: </label>
+						</div>
+	
+						<div class="small-9 columns">
+							<input type="text" id="middle-label">
+						</div>
+					</div>
+
+					<button class="btn btn-default navbar-btn" id="submit" data-toggle="modal" data-target="#mymodal">Theater Showtimes</button>
+
+					<button class="btn btn-default navbar-btn" id="addCal">Add to Calendar</button>
 								
-				<a href="firstPage.html"> <button class="btn btn-default navbar-btn" id="back">Back to Movies</button></a>
-						</div>	
+					<a href="firstPage.html"><button class="btn btn-default navbar-btn" id="back">Back to Movies</button></a>
+				</div>	
+
 				<div class="row">
 				
 
@@ -113,9 +120,9 @@
 							</div>
 							<div class="modal-body">
 								<form>
-									<div class="movieTheaterOne">
+									<div id="movieTheaterOne">
 										<h5 id="theatreName"></h5>
-										<p>Theater Location</p>
+										<div id="movieTimes"></div>
 									</div>
 								</form>
 							</div>	
@@ -133,34 +140,35 @@
       <ul class="tabs" data-tabs id="example-tabs">
         <li class="tabs-title is-active"><a href="#panel1" aria-selected="true">Description</a></li>
         <li class="tabs-title"><a href="#panel2">Trailer</a></li>
+        <li class="tabs-title"><a href="#panel3">Recommendations</a></li>
       </ul>
 
-
       <div class="tabs-content" data-tabs-content="example-tabs">
+
         <div class="tabs-panel is-active" id="panel1">
+
           <h4>Description</h4>
+
           <div class="media-object stack-for-small">
 
-
-
-
             <div id="moviePoster" class="media-object-section">
+
               <img id="poster" class="thumbnail" src="http://placehold.it/200x200">
             </div>
 
-
             <div class="media-object-section">
-            <h5 id="movieName"></h5>
-              <p id="movieDescription"></p>
-              <p id="actors"></p>
-              <p id="runtime"></p>
 
+            	<h5 id="movieName"></h5>
+              	<p id="movieDescription"></p>
+              	<p id="actors"></p>
+              	<p id="runtime"></p>
             </div>
           </div>    
        </div>
 
 
         <div class="tabs-panel" id="panel2">
+
           <div class="row large-12">
             <div class="column">
 
@@ -170,8 +178,18 @@
             </div>
      
           </div>
+
         </div>
-      </div>
+
+		<div class="tabs-panel" id="panel3">
+
+	<h5>Here are some recommendations from fans who enjoyed this movie </h5><br>
+
+			<div id="recoPosters" class="row">
+
+			</div>
+		</div>
+    </div>
     </div>
 		<footer class="footer">
 			
@@ -183,15 +201,14 @@
 	<!-- Javascript -->
 	
 	<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
-	<script src="http://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.js"></script>
+ 	<script src="http://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.js"></script>
 	<script>
-		$(document).foundation();
-	</script>
-
-	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    	$(document).foundation();
+    </script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 	<script src="assets/javascript/java2.js"></script>
 	<script src="assets/javascript/onConnectAPI.js"></script>
+	<script src="assets/javascript/recoTab.js"></script>
 
 </body>
 </html>
