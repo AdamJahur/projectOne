@@ -16,7 +16,7 @@ $(document).ready(function () {
 		console.log(queryURL);
 
 		$.ajax(request).done(function(response) {
-
+console.log(response);
 			var results = response.results;
 
 			for (i = 0; i < results.length; i++) {
