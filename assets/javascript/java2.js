@@ -89,14 +89,6 @@ $(document).ready(function () {
 	multiImageFunction();
 	movieDescription();
 
-//  pop-up calendar function
-	$(function (){
-		
-		$("#date-picker").datepicker();
-		$("#date-picker").formatDate("yy-mm-dd");
-	
-	});
-
 	// Testing & Debugging
 	
 

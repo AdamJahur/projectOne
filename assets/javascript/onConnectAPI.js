@@ -6,19 +6,19 @@ $(document).ready(function () {
 
 		var code = $('#middle-label').val();
 
-		var date = $('#date-picker').val();
+		var date = $('#date').val();
 
 		console.log(date);
 
 		var query = {
 			api_key: "c8j5g22c7auwnc6s39v86ep8",
 			zip: code,
-			startDate: "2016-11-21"
+			startDate: date
 		}
 
 		var queryURL = "http://data.tmsapi.com/v1.1/movies/showings?" + $.param(query);
 
-		// console.log(queryURL);
+		console.log(queryURL);
 
 		var request = {
 			url: queryURL,
