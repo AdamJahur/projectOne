@@ -9,6 +9,16 @@ h3{
 	padding-left: 20px;
 	letter-spacing: 3px;
 }
+.GBMD{
+	float: right;
+	font-family: 'Raleway', 'sans-serif';
+	margin-right: 20px;
+}
+.GBAM{
+	float: right;
+	font-family: 'Raleway', 'sans-serif';
+	margin-right: 10px;
+}
 .footer{	
 	position: fixed-bottom;
     left: 0;
