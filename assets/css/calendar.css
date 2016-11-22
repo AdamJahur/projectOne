@@ -1,4 +1,6 @@
-
+.navbar-inverse{
+	height: 75px;
+}
 h3{
 	height: 18px;
 	color: white;
@@ -8,7 +10,7 @@ h3{
 	letter-spacing: 3px;
 }
 .footer{	
-	position: absolute;
+	position: fixed;
     left: 0;
     bottom: 0;
     width: 100%;
