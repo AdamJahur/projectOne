@@ -34,7 +34,7 @@ $(document).ready(function () {
 
 				var theatreDiv = $('<div>');
 				theatreDiv.addClass('theatreDiv');
-				theatreDiv.attr('theatre-id', response[i].theatreId);
+				theatreDiv.attr('id', response[i].theatreId);
 
 				var theatreName = response[i].name;
 				theatreDiv.text(theatreName);
@@ -56,8 +56,9 @@ $(document).ready(function () {
 
 		var query = {
 			api_key: "f46d2w5jhyj3nb8xvkrxwmj6",
-			zip: code,
-			startDate: date
+			zip: "32765",
+			startDate: "2016-11-22",
+			radius: "10"
 		}
 
 		var queryURL = "http://data.tmsapi.com/v1.1/movies/showings?" + $.param(query);
@@ -89,7 +90,7 @@ $(document).ready(function () {
 
 						console.log(theatreId);
 
-						$('<div class="theareDiv" theatre-id=' + theatreId + '>').append(timeButton);
+						$('#' + theatreId).append(timeButton);
 
 						var hours = time.substring(11, 13);
 						var minutes = time.substring(14, 16);
@@ -118,8 +119,8 @@ $(document).ready(function () {
 
 	$('#submit').on('click', function() {
 
-		theatreTime();
 		theatreLocation();
+		theatreTime();
 	});
 
 })
