@@ -2,7 +2,7 @@ $(document).ready(function () {
 
 	var movieID = localStorage.getItem('movieID');
 	var moviePoster = localStorage.getItem('movieURL');
-
+	
 	function defaultDate () {
 
 		var date = new Date();
@@ -164,7 +164,10 @@ $(document).ready(function () {
 			}
 
 		})
-	}
+
+	
+}
+	
 
 	// Start Up Functions		
 	multiImageFunction();
@@ -172,6 +175,7 @@ $(document).ready(function () {
 	actorsName();
 	trailer();
 	defaultDate();
+
 
 });
 

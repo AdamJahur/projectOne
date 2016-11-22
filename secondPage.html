@@ -101,16 +101,23 @@
 						<div class="small-3 columns">
 
 							<label for="middle-label" class="date-picker">Zip Code: </label>
+
+
 						</div>
 	
 						<div class="small-9 columns">
 
-							<input type="number" id="middle-label" placeholder="12345">
+						<form action="javascript:0">
 
+							<input type="text" required pattern="(\d{5}([\-]\d{4})?)" value name="postalcodes_pattern0" id="postalcodes_pattern0" list="postalcodes_pattern0_datalist" placeholder="12345">
+
+							
+
+				
 						</div>
 					</div>
 
-					<button class="btn btn-default navbar-btn" id="submit" data-toggle="modal" data-target="#mymodal">Theater Showtimes</button>
+					<button class="btn btn-default navbar-btn" id="submit" data-toggle="modal" data-target="#mymodal">Theater Showtimes</button> </form>
 
 					<a href="calendar.html"><button class="btn btn-default navbar-btn" id="addCal">View Calendar</button></a>
 								
