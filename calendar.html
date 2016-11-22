@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Featured Presentations</title>
+  <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/css?family=Great+Vibes|Raleway:400i" rel="stylesheet">
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" type="text/css" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.6.1/fullcalendar.min.css" type="text/css" rel="stylesheet" />
+  <link rel="stylesheet" type="text/css" href="assets/css/calendar.css">
+</head>
+
+<body>
+  <header>
+    <nav class="navbar navbar-inverse">
+      <h3><a href="firstPage.html" style="text-decoration:none">Featured Presentations</a></h3>
+    </nav>
+  </header>
+
+  <a href="secondPage.html"><button class="GBMD">Go Back to <br> Movie Description</button></a>
+
+  <a href="firstPage.html"><button class="GBAM">Go Back to <br> All Movies</button></a>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+        <div id="bootstrapModalFullCalendar"></div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <p>&copy; The Greatest Group Ever</p>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.8.2/moment.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.6.1/fullcalendar.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+  <script>
+    $(document).ready(function() {
+      $('#bootstrapModalFullCalendar').fullCalendar({
+        header: {
+          left: '',
+          center: 'prev title next',
+          right: ''
+        },
+      });
+    });
+  </script>
+</body>
+</html>
