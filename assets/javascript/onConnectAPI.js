@@ -34,7 +34,7 @@ $(document).ready(function () {
 
 				theatreDiv.addClass('theatreDiv');
 				theatreDiv.attr('id', response[i].theatreId);
-				theatreDiv.html('<div>' + theatreName + '</div>');
+				theatreDiv.html('<div class="theatreName">' + theatreName + '</div>');
 
 				$('#theatreName').append(theatreDiv);
 			}
