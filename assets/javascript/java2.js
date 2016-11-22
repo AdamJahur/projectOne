@@ -165,9 +165,8 @@ $(document).ready(function () {
 
 	
 }
-	trailer();
-
 	
+
 	// Start Up Functions		
 	multiImageFunction();
 	movieDescription();
