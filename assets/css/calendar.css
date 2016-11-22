@@ -10,12 +10,12 @@ h3{
 	letter-spacing: 3px;
 }
 .footer{	
-	position: fixed;
+	position: fixed-bottom;
     left: 0;
     bottom: 0;
     width: 100%;
 	border-radius: 5px;
-	padding-top: 15px;
+	margin-top: 20px;
 	height: 60px;
 	text-align: center;
 	color: white;
