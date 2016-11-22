@@ -3,6 +3,21 @@ $(document).ready(function () {
 	var movieID = localStorage.getItem('movieID');
 	var moviePoster = localStorage.getItem('movieURL');
 
+	function defaultDate () {
+
+		var date = new Date();
+	
+		var day = date.getDate();
+		var month = date.getMonth() + 1;
+		var year = date.getFullYear();
+	
+		if (month < 10) month = "0" + month;
+		if (day < 10) day = "0" + day;
+	
+		var today = year + "-" + month + "-" + day;       
+		$("#date").attr("value", today);
+	}
+
 	function multiImageFunction () {
 
 		var query = {
@@ -70,27 +85,50 @@ $(document).ready(function () {
 		}
 
 		$.ajax(request).done(function(response) {
-
 			var image = ('https://image.tmdb.org/t/p/w500' + moviePoster);
 			var title = response.title;
 			var tagLine = response.tagline;
 			var runtime = ("Runtime: " + response.runtime + " min");
 			var overview = response.overview;
+			var production = ("Production Company: " + response.production_companies[0].name);
+			var genre =  ("Genre: " + response.genres[0].name);
+			
 
 			$('#poster').attr('src', image);
 			$('#movieName').html(title);
 			$('#movieDescription').html(overview);
 			$('#runtime').html(runtime);
 			$('#movieTitle').html(title);
+			$('#production').html(production);
+			$('#genre').html(genre);
 
 		})
 	}
 
-	multiImageFunction();
-	movieDescription();
-
-
-	//trailer
+	function actorsName () {
+	
+		var query = {
+			api_key: "0735005732556ad68ab1353886fe6517",
+		}
+	
+		var queryURL = "https://api.themoviedb.org/3/movie/" + movieID + "/credits?" +  $.param(query);
+	
+		var request = {
+			url: queryURL,
+			method: 'GET'
+		}
+	
+		$.ajax(request).done(function(response) {
+				
+			$('#actors').html("Starring: ")
+	
+			for(i = 0; i < response.cast.length && i < 5; i++) {
+	
+				var crew = response.cast[i].name;
+				$('#actors').append(crew).append(", ");
+			}
+		});
+	};
 
 	function trailer () {
 
@@ -124,14 +162,19 @@ $(document).ready(function () {
 			}
 
 		})
+
 	
 }
 	trailer();
 
-		$('.date-picker').on('input', function() {
-		});
-	// Testing & Debugging
-	
+
+	// Start Up Functions		
+	multiImageFunction();
+	movieDescription();
+	actorsName();
+	trailer();
+	defaultDate();
+
 
 });
 
