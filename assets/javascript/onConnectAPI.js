@@ -41,8 +41,6 @@ $(document).ready(function () {
 					$('#movieTimes').empty();
 					$('#theatreName').empty();
 
-					debugger;
-
 					var theatreName = movie.showtimes[0].theatre.name;
 					$('#theatreName').append(theatreName);
 

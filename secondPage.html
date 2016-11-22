@@ -77,10 +77,7 @@
 			<div id="movieImages" class="medium-6 columns">
 
 				<img id="bigImage" class="thumbnail">
-				<div class="row small-up-4 smallImage">
-
-
-				</div>
+				<div class="row small-up-4 smallImage"></div>
 			</div>
 
 			<!-- User Input -->
@@ -94,10 +91,12 @@
 					<div class="row">
 
 						<div class="small-3 columns">
+
 							<label for="middle-label" class="middle">Select Date: </label>
 						</div>
 
 						<div class="small-9 columns">
+
 							<input type="date" id="date">
 						</div>
 					</div>
@@ -105,10 +104,12 @@
 					<div class="row">
 	
 						<div class="small-3 columns">
+
 							<label for="middle-label" class="date-picker">Zip Code: </label>
 						</div>
 	
 						<div class="small-9 columns">
+
 							<input type="text" id="middle-label">
 						</div>
 					</div>
@@ -118,34 +119,42 @@
 					<button class="btn btn-default navbar-btn" id="addCal">Add to Calendar</button>
 								
 					<a href="firstPage.html"><button class="btn btn-default navbar-btn" id="back">Back to Movies</button></a>
-				</div>	
+				</div>
+			</div>	
+		</div>
 
-				<div class="row">
+		<div class="row">
 				
+			<div class="modal fade" id="mymodal">
 
-				<div class="modal fade" id="mymodal">
-					<div class="modal-dialog">
-						<div class="modal-content">
-							<div class="modal-header">
-							 <button type="button" class="close" data-dismiss="modal">&times;</button>
-							 <h3 class="modal-theatre">Choose a Theatre</h3>
-							</div>
-							<div class="modal-body">
-								<form>
-									<div id="movieTheaterOne">
+				<div class="modal-dialog">
+
+					<div class="modal-content">
+
+						<div class="modal-header">
+
+							<button type="button" class="close" data-dismiss="modal">&times;</button>
+
+							<h3 class="modal-theatre">Choose a Theatre</h3>
+						</div>
+
+						<div class="modal-body">
+
+							<form>
+								<div id="movieTheaterOne">
+
 										<h5 id="theatreName"></h5>
 										<div id="movieTimes"></div>
-									</div>
-								</form>
-							</div>	
-						<div class="modal-footer"></div>
+								</div>
+							</form>
+						</div>	
 						<button class="btn btn-default btn-block" id="submit" data-dismiss="modal">Submit</button>
 					</div>
 				</div>
 			</div>
 		</div>
-	</div>			
-</div>
+				
+
 
 		  <div class="column-row">
       <hr>
@@ -204,11 +213,12 @@
 		</div>
     </div>
     </div>
-		<footer class="footer">
+
+	<footer class="footer">
 			
-				<p style="color: white">&copy; The Greatest Group Ever</p>
+		<p style="color: white">&copy; The Greatest Group Ever</p>
 			
-		</footer>
+	</footer>
 	
 
 	<!-- Javascript -->
