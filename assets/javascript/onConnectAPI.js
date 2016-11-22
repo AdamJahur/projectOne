@@ -1,62 +1,25 @@
+
 $(document).ready(function () {
+		var movieTitle = localStorage.getItem('movieTitle');
 
-	var movieTitle = localStorage.getItem('movieTitle');
-
-	function theatreLocation () {
-
-		var code = $('#middle-label').val();
-
-		var date = $('#date').val();
-
-		var query = {
-			api_key: "c8j5g22c7auwnc6s39v86ep8",
-			zip: code,
-			startDate: date,
-			radius: "10"
-		}
-
-		var queryURL = "http://data.tmsapi.com/v1.1/theatres?" + $.param(query);
-
-		var request = {
-			url: queryURL,
-			method: 'GET'
-		}
-
-		$.ajax(request).done(function(response) {
-
-			for (i = 0; i < response.length; i++) {
-
-				var theatreName = response[i].name;
-
-				var theatreDiv = $('<div>');
-
-				theatreDiv.addClass('theatreDiv');
-				theatreDiv.attr('id', response[i].theatreId);
-				theatreDiv.html('<div class="theatreName">' + theatreName + '</div>');
-
-				$('#theatreName').append(theatreDiv);
-			}
-		});
-	};
-
-	function theatreTime () {
+	function zipCode () {
 
 		var code = $('#middle-label').val();
 
 		var date = $('#date').val();
 
-		$('#movieTimes').empty();
-		$('#theatreName').empty();
+		console.log(date);
 
 		var query = {
-			api_key: "c8j5g22c7auwnc6s39v86ep8",
+			api_key: "f46d2w5jhyj3nb8xvkrxwmj6",
 			zip: code,
-			startDate: date,
-			radius: "10"
+			startDate: date
 		}
 
 		var queryURL = "http://data.tmsapi.com/v1.1/movies/showings?" + $.param(query);
 
+		console.log(queryURL);
+
 		var request = {
 			url: queryURL,
 			method: 'GET'
@@ -64,21 +27,32 @@ $(document).ready(function () {
 
 		$.ajax(request).done(function(response) {
 
+			console.log(response);
+
+			
 			for (i = 0; i < response.length; i++) {
 				
 				if(response[i].title === movieTitle) {
 
 					var movie = response[i]
+
+					//Theatre Name
+
+					$('#movieTimes').empty();
+					$('#theatreName').empty();
+
+					var theatreName = movie.showtimes[0].theatre.name;
+					$('#theatreName').append(theatreName);
 					
+
 					for (i = 0; movie.showtimes.length; i++) {
 
 						// Time
 
 						var timeButton = $('<button type="button" class="btn btn-warning">');
 						var time = movie.showtimes[i].dateTime;
-						var theatreId = movie.showtimes[i].theatre.id;
 
-						$('#' + theatreId).append(timeButton);
+						$('#movieTimes').append(timeButton);
 
 						var hours = time.substring(11, 13);
 						var minutes = time.substring(14, 16);
@@ -96,8 +70,6 @@ $(document).ready(function () {
 						timeButton.attr('movie-time', time);
 						timeButton.text(formatTime);
 
-						// if (movie.showtimes[i].theatre.id === $(+)) {}
-
 					}
 				}	
 			}
@@ -105,11 +77,7 @@ $(document).ready(function () {
 	}
 
 
-	$('#submit').on('click', function() {
-
-		theatreLocation();
-		theatreTime();
-	});
+	$('#submit').on('click', zipCode);
 
 })
 
