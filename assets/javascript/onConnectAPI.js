@@ -24,8 +24,6 @@ $(document).ready(function () {
 
 		$.ajax(request).done(function(response) {
 
-			console.log(response)
-
 			for (i = 0; i < response.length; i++) {
 
 				var theatreName = response[i].name;
@@ -40,8 +38,6 @@ $(document).ready(function () {
 			}
 		});
 	};
-
-	// theatreLocation();
 
 	function theatreTime () {
 
@@ -68,8 +64,6 @@ $(document).ready(function () {
 
 		$.ajax(request).done(function(response) {
 
-			console.log(response);
-
 			for (i = 0; i < response.length; i++) {
 				
 				if(response[i].title === movieTitle) {
@@ -83,8 +77,6 @@ $(document).ready(function () {
 						var timeButton = $('<button type="button" class="btn btn-warning">');
 						var time = movie.showtimes[i].dateTime;
 						var theatreId = movie.showtimes[i].theatre.id;
-
-						console.log(theatreId);
 
 						$('#' + theatreId).append(timeButton);
 
