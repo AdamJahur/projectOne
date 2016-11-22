@@ -28,7 +28,7 @@
 
 		<nav class="navbar navbar-inverse">
 
-				<!-- Logo -->
+			<!-- Logo -->
 
 			<h3><a href="firstPage.html" style="text-decoration:none">Featured Presentations</a></h3>
 
@@ -143,76 +143,72 @@
 							<form>
 								<div id="movieTheaterOne">
 
-										<h5 id="theatreName"></h5>
-										<div id="movieTimes"></div>
+									<h5 id="theatreName"></h5>
+									<div id="movieTimes"></div>
 								</div>
 							</form>
-						</div>	
+						</div>
+
 						<button class="btn btn-default btn-block" id="submit" data-dismiss="modal">Submit</button>
 					</div>
 				</div>
 			</div>
 		</div>
 				
+		<div class="column-row">
+
+      		<ul class="tabs" data-tabs id="example-tabs">
+
+        		<li class="tabs-title is-active"><a href="#panel1" aria-selected="true">Description</a></li>
+        		<li class="tabs-title"><a href="#panel2">Trailer</a></li>
+        		<li class="tabs-title"><a href="#panel3">Recommendations</a></li>
+      		</ul>
+
+      		<div class="tabs-content" data-tabs-content="example-tabs">
+
+        		<div class="tabs-panel is-active" id="panel1">
+
+          			<h4>Description</h4>
+	
+          			<div class="media-object stack-for-small">
+	
+            			<div id="moviePoster" class="media-object-section">
+	
+              				<img id="poster" class="thumbnail" src="http://placehold.it/200x200">
+           				</div>
+	
+            			<div class="media-object-section">
+	
+            				<h5 id="movieName"></h5>
+              				<p id="movieDescription"></p>
+              				<p id="actors"></p>
+              				<p id="runtime"></p>
+            			</div>
+          			</div>    
+      			</div>
 
 
-		  <div class="column-row">
-      <hr>
-      <ul class="tabs" data-tabs id="example-tabs">
-        <li class="tabs-title is-active"><a href="#panel1" aria-selected="true">Description</a></li>
-        <li class="tabs-title"><a href="#panel2">Trailer</a></li>
-        <li class="tabs-title"><a href="#panel3">Recommendations</a></li>
-      </ul>
+        		<div class="tabs-panel" id="panel2">
 
-      <div class="tabs-content" data-tabs-content="example-tabs">
+          			<div class="row large-12">
 
-        <div class="tabs-panel is-active" id="panel1">
+            			<div class="column">
 
-          <h4>Description</h4>
+              				<object class="trailer" style="width:560px; height:315px"></object>
+              				<div class="notrailer"></div>
+            			</div>
+        			</div>
+		        </div>
 
-          <div class="media-object stack-for-small">
+				<div class="tabs-panel" id="panel3">
 
-            <div id="moviePoster" class="media-object-section">
+					<h5>Here are some recommendations from fans who enjoyed this movie </h5><br>
 
-              <img id="poster" class="thumbnail" src="http://placehold.it/200x200">
-            </div>
-
-            <div class="media-object-section">
-
-            	<h5 id="movieName"></h5>
-              	<p id="movieDescription"></p>
-              	<p id="actors"></p>
-              	<p id="runtime"></p>
-            </div>
-          </div>    
-       </div>
-
-
-        <div class="tabs-panel" id="panel2">
-
-          <div class="row large-12">
-            <div class="column">
-
-
-
-              <object class="trailer" style="width:560px; height:315px"></object>
-              <div class="notrailer"></div>
-            </div>
-     
-          </div>
-
-        </div>
-
-		<div class="tabs-panel" id="panel3">
-
-	<h5>Here are some recommendations from fans who enjoyed this movie </h5><br>
-
-			<div id="recoPosters" class="row">
-
-			</div>
-		</div>
-    </div>
-    </div>
+					<div id="recoPosters" class="row"></div>
+				</div>
+    		</div>
+    	</div>
+	</div>
 
 	<footer class="footer">
 			
