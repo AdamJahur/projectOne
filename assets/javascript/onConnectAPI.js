@@ -11,7 +11,7 @@ $(document).ready(function () {
 		console.log(date);
 
 		var query = {
-			api_key: "f46d2w5jhyj3nb8xvkrxwmj6",
+			api_key: "c8j5g22c7auwnc6s39v86ep8",
 			zip: code,
 			startDate: date
 		}

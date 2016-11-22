@@ -21,10 +21,17 @@ body{
 }
     
 
-.description {
+#descriptionOne {
 	font-family: 'Raleway', 'sans-serif';
 	font-size: 30px;
 	color: aliceblue;
+}
+
+#descriptionTwo{
+	font-family: 'Raleway', 'sans-serif';
+	font-size: 30px;
+	color: aliceblue;
+	padding-bottom: 20px;
 }
 
 img {

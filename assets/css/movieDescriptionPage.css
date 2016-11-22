@@ -134,3 +134,33 @@ button {
 h4 {
 	color: blue;
 }
+
+#movieDescription {
+	font-family: 'Raleway', 'sans-serif';
+	color: #0311FF;
+	font-size: 17px;
+}
+
+#actors{
+	font-family: 'Raleway', 'sans-serif';
+	color: #0311FF;
+}
+
+#production{
+	color: #0311FF;
+	font-family: 'Raleway', 'sans-serif';
+}
+
+#genre {
+	font-family: 'Raleway', 'sans-serif';
+	color: #0311FF;
+}
+
+#runtime{
+	font-family: 'Raleway', 'sans-serif';
+	color: #0311FF;
+}
+
+#movieName {
+	color: #03074B;
+}
