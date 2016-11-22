@@ -8,18 +8,14 @@ $(document).ready(function () {
 
 		var date = $('#date').val();
 
-		console.log(date);
-
 		var query = {
 			api_key: "c8j5g22c7auwnc6s39v86ep8",
-			zip: "32765",
-			startDate: "2016-11-22",
+			zip: code,
+			startDate: date,
 			radius: "10"
 		}
 
 		var queryURL = "http://data.tmsapi.com/v1.1/theatres?" + $.param(query);
-
-		console.log(queryURL);
 
 		var request = {
 			url: queryURL,
@@ -32,12 +28,14 @@ $(document).ready(function () {
 
 			for (i = 0; i < response.length; i++) {
 
+				var theatreName = response[i].name;
+
 				var theatreDiv = $('<div>');
+
 				theatreDiv.addClass('theatreDiv');
 				theatreDiv.attr('id', response[i].theatreId);
+				theatreDiv.html('<div>' + theatreName + '</div>');
 
-				var theatreName = response[i].name;
-				theatreDiv.text(theatreName);
 				$('#theatreName').append(theatreDiv);
 			}
 		});
@@ -55,15 +53,13 @@ $(document).ready(function () {
 		$('#theatreName').empty();
 
 		var query = {
-			api_key: "f46d2w5jhyj3nb8xvkrxwmj6",
-			zip: "32765",
-			startDate: "2016-11-22",
+			api_key: "c8j5g22c7auwnc6s39v86ep8",
+			zip: code,
+			startDate: date,
 			radius: "10"
 		}
 
 		var queryURL = "http://data.tmsapi.com/v1.1/movies/showings?" + $.param(query);
-
-		console.log(queryURL);
 
 		var request = {
 			url: queryURL,
