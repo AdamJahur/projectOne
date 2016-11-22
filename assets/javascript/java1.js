@@ -33,11 +33,17 @@ $(document).ready(function () {
 				columnBlock.attr('movie-poster', results[i].poster_path)
 				columnBlock.attr('movie-title', results[i].title);
 
-				var posterURL = 'https://image.tmdb.org/t/p/w500' + results[i].poster_path;
-				imagePoster.attr('src', posterURL);
+				if (results[i].poster_path === null) {
+
+					return;
+
+				} else {
+					
+					var posterURL = 'https://image.tmdb.org/t/p/w500' + results[i].poster_path;
+					imagePoster.attr('src', posterURL);
+				}
 
 				selectButton.attr('movie-id', movieID);
-
 
 				imagePoster_link.append(imagePoster);
 				columnBlock.append(imagePoster_link);
