@@ -128,7 +128,8 @@ $(document).ready(function () {
 }
 	trailer();
 
-
+		$('.date-picker').on('input', function() {
+		});
 	// Testing & Debugging
 	
 
