@@ -70,18 +70,22 @@ $(document).ready(function () {
 		}
 
 		$.ajax(request).done(function(response) {
-
 			var image = ('https://image.tmdb.org/t/p/w500' + moviePoster);
 			var title = response.title;
 			var tagLine = response.tagline;
 			var runtime = ("Runtime: " + response.runtime + " min");
 			var overview = response.overview;
+			var production = ("Production Company: " + response.production_companies[0].name);
+			var genre =  ("Genre: " + response.genres[0].name);
+			
 
 			$('#poster').attr('src', image);
 			$('#movieName').html(title);
 			$('#movieDescription').html(overview);
 			$('#runtime').html(runtime);
 			$('#movieTitle').html(title);
+			$('#production').html(production);
+			$('#genre').html(genre);
 
 		})
 	}
