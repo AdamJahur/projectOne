@@ -1,0 +1,22 @@
+
+h3{
+	height: 18px;
+	color: white;
+	font-family: 'Great Vibes', 'cursive';
+	font-size: 30pt;
+	padding-left: 20px;
+	letter-spacing: 3px;
+}
+.footer{	
+	position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+	border-radius: 5px;
+	padding-top: 15px;
+	height: 60px;
+	text-align: center;
+	color: white;
+	background-color: black;
+	font-family: 'Raleway', 'sans-serif';
+}
