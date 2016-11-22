@@ -17,53 +17,63 @@
 
 <body>
 
-	<div>
+	<header>
 
-		<header>
+		<nav class="navbar navbar-inverse">
 
-			<nav class="navbar navbar-inverse">
+			<h3><a href="firstPage.html" style="text-decoration:none">Featured Presentations</a></h3>
 
-				<h3><a href="firstPage.html" style="text-decoration:none">Featured Presentations</a></h3>
-				<button type="button" class="btn btn-default navbar-btn navbar-right" data-toggle= "modal" data-target="#signInModal">Sign in</button>
-				<div class="modal fade" id="signInModal">
-					<div class="modal-dialog">
-						<div class="modal-content">
-							<div class="modal-header">
-							 <button type="button" class="close" data-dismiss="modal">&times;</button>
-								<h2>Login to Google</h2>
-							</div>
-							<div class="modal-body">
-								<form id="input" action="action_page.php">
-									Username:<br>
-									<input id="user" type="text" name="userName" value=""><br><br><br>
-									Password:<br>
-									<input id="pass" type="text" name="password" value=""><br>
-									<input class="btn btn-info" type="submit" value="Submit">
-								</form>
-							</div>
-							<div class="modal-footer"></div>
+			<button type="button" class="btn btn-default navbar-btn navbar-right" data-toggle= "modal" data-target="#signInModal">Sign in</button>
+
+			<div class="modal fade" id="signInModal">
+
+				<div class="modal-dialog">
+
+					<div class="modal-content">
+
+						<div class="modal-header">
+
+						 	<button type="button" class="close" data-dismiss="modal">&times;</button>
+
+							<h2>Login to Google</h2>
+						</div>
+
+						<div class="modal-body">
+
+							<form id="input" action="action_page.php">
+
+								Username:<br>
+
+								<input id="user" type="text" name="userName" value=""><br><br><br>
+
+								Password:<br>
+
+								<input id="pass" type="text" name="password" value=""><br>
+
+								<input class="btn btn-info" type="submit" value="Submit">
+							</form>
 						</div>
 					</div>
 				</div>
-				</div>
-			</nav>
-		</header>
-	</div>
+			</div>
+		</nav>
+	</header>
+
+	<!-- Movie Loading Page -->
 
 	<div class="container">
 
 		<div class="row">
-			<div class="description">Pick a movie. Add it to your calendar. <br>Share it with your friends. Movie night made easy.
+
+			<div class="description">Pick a movie. Add it to your calendar.</div>
+			<div class="description">Share it with your friends. Movie night made easy.</div>
 		</div>
-	<br>
 	</div>
 
 	<footer class="footer">
 
-		
-
 			<p>&copy; The Greatest Group Ever</p>
-	
+
 	</footer>
 
 	<script src="https://code.jquery.com/jquery-3.1.1.js" integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA=" crossorigin="anonymous"></script>
