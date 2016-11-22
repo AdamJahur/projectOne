@@ -158,8 +158,7 @@ $(document).ready(function () {
 			}
 
 		})
-	
-}
+	}
 
 	// Start Up Functions		
 	multiImageFunction();
