@@ -105,39 +105,28 @@ $(document).ready(function () {
 			method: 'GET'
 		}
 		
-
-		console.log("url", queryURL);
-
 		$.ajax(request).done(function(response) {
 
-			console.log("test", response);
-			
 			var data = response.results[0].key;
-			console.log(data);
-
 			
+
 			if (response.results[0].key) {
 
 
 			var trailerlink = ('https://www.youtube.com/embed/' + data);
 			$(".trailer").attr('data', trailerlink);
-				console.log("trailer link", trailerlink);
-}
+				
+			}
 				else {
 
-					$(".notrailer").html('<p>No Trailer Available.</p>');
+					$(".notrailer").attr('src', "http://placehold.it/100x100");
 
 			}
-
-		
-
 
 		})
 	
 }
 	trailer();
-
-
 
 
 	// Testing & Debugging
