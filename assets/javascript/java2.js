@@ -85,10 +85,32 @@ $(document).ready(function () {
 
 		})
 	}
+function actorsName () {
+
+	var query = {
+		api_key: "0735005732556ad68ab1353886fe6517",
+	}
+
+	var queryURL = "https://api.themoviedb.org/3/movie/" + movieID + "/credits?" +  $.param(query);
+
+	var request = {
+		url: queryURL,
+		method: 'GET'
+	}
+
+	$.ajax(request).done(function(response) {
+			$('#actors').html("Starring: ")
+		for(i = 0; i < response.cast.length && i < 5; i++) {
+			var crew = response.cast[i].name;
+			$('#actors').append(crew).append(", ");
+		}
+	});
+
+};
 
 	multiImageFunction();
 	movieDescription();
-
+	actorsName();
 
 	//trailer
 

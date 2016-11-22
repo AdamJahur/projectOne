@@ -1,5 +1,5 @@
-$(document).ready(function () {
 
+$(document).ready(function () {
 		var movieTitle = localStorage.getItem('movieTitle');
 
 	function zipCode () {
@@ -8,10 +8,10 @@ $(document).ready(function () {
 
 		var date = $('#date').val();
 
-		//console.log(date);
+		console.log(date);
 
 		var query = {
-			api_key: "c8j5g22c7auwnc6s39v86ep8",
+			api_key: "f46d2w5jhyj3nb8xvkrxwmj6",
 			zip: code,
 			startDate: date
 		}
@@ -43,10 +43,6 @@ $(document).ready(function () {
 
 					var theatreName = movie.showtimes[0].theatre.name;
 					$('#theatreName').append(theatreName);
-
-					var actors = movie.topCast;
-					$('#actors').append(actors + " ");
-
 					
 
 					for (i = 0; movie.showtimes.length; i++) {
@@ -58,29 +54,21 @@ $(document).ready(function () {
 
 						$('#movieTimes').append(timeButton);
 
-						var formatTime = time.substring(11, 16);
+						var hours = time.substring(11, 13);
+						var minutes = time.substring(14, 16);
+
+						var isPM = false;
+
+						if (hours > 12){
+							hours-=12;
+							isPM = true;
+						}
+
+						var formatTime = hours + ":" + minutes;
+						formatTime+= (isPM) ? " PM" : " AM";
 
 						timeButton.attr('movie-time', time);
 						timeButton.text(formatTime);
-
-
-						//for (formatTime) {
-						//	var parts = times[formatTime].split(':'),
-							//hour = parts[0],
-						//	minutes = parts[1];
-
-						//	if (hour > 12) {
-						//		times[time] = (hour - 12) + ':' + minutes + ' pm';
-						//	} else if (hour == 0) {
-						//		times[time] = 12 + ':' + minutes + ' am';
-						//	} else if (hour == 12) {
-							//	times[time] += ' pm';
-							//} else {
-							//	times[time] += ' am';
-							//}
-//}
-
-//console.log(times);
 
 					}
 				}	
