@@ -23,40 +23,52 @@
 
 <body>
 
-	
+	<header class="head">
 
-		<header class="head">
-			<nav class="navbar navbar-inverse">
-				<h3><a href="firstPage.html" style="text-decoration:none">Featured Presentations</a></h3>
-				<button type="button" class="btn btn-default navbar-btn navbar-right" data-toggle= "modal" data-target="#signInModal">Sign in</button>
+
+		<nav class="navbar navbar-inverse">
+
+			<!-- Logo -->
+
+			<h3><a href="firstPage.html" style="text-decoration:none">Featured Presentations</a></h3>
+
+			<button type="button" class="btn btn-default navbar-btn navbar-right" data-toggle= "modal" data-target="#signInModal">Sign in</button>
+
  			<div class="modal fade" id="signInModal">
- 					<div class="modal-dialog">
- 						<div class="modal-content">
- 							<div class="modal-header">
- 							 <button type="button" class="close" data-dismiss="modal">&times;</button>
- 								<h3>Login to Google</h3>
- 							</div>
-							<div class="modal-body">
- 								<form action="action_page.php">
- 									Username:<br>
- 									<input type="text" name="userName" value=""><br>
- 									Password:
- 									<input type="text" name="password" value=""><br>
- 									<input class="btn btn-info" type="submit" value="Submit">
-								</form>
-							</div>
-							<div class="modal-footer"></div>
+
+ 				<div class="modal-dialog">
+
+ 					<div class="modal-content">
+
+ 						<div class="modal-header">
+
+ 							<button type="button" class="close" data-dismiss="modal">&times;</button>
+
+ 							<h3>Login to Google</h3>
+ 						</div>
+
+						<div class="modal-body">
+
+ 							<form action="action_page.php">
+
+								<div id="userName">Username: </div>
+
+								<input type="text" name="userName" value=""><br>
+
+								<div id="password">Password: </div>
+
+								<input type="text" name="password" value=""><br>
+
+								<input class="btn btn-info" type="submit" value="Submit">
+							</form>
 						</div>
- 					</div>
+					</div>
  				</div>
- 				</div>
-			</nav>
-		</header>
+ 			</div>
+		</nav>
+	</header>
 
-		<div class="text">
-		</div>
-
-		<div class="container">
+	<div class="container">
 
 		<div class="row">
 			
@@ -65,10 +77,7 @@
 			<div id="movieImages" class="medium-6 columns">
 
 				<img id="bigImage" class="thumbnail">
-				<div class="row small-up-4 smallImage">
-
-
-				</div>
+				<div class="row small-up-4 smallImage"></div>
 			</div>
 
 			<!-- User Input -->
@@ -82,10 +91,12 @@
 					<div class="row">
 
 						<div class="small-3 columns">
+
 							<label for="middle-label" class="middle">Select Date: </label>
 						</div>
 
 						<div class="small-9 columns">
+
 							<input type="date" id="date">
 						</div>
 					</div>
@@ -93,11 +104,14 @@
 					<div class="row">
 	
 						<div class="small-3 columns">
+
 							<label for="middle-label" class="date-picker">Zip Code: </label>
 						</div>
 	
 						<div class="small-9 columns">
+
 							<input type="text" id="middle-label" placeholder="12345">
+
 						</div>
 					</div>
 
@@ -106,97 +120,102 @@
 					<button class="btn btn-default navbar-btn" id="addCal">Add to Calendar</button>
 								
 					<a href="firstPage.html"><button class="btn btn-default navbar-btn" id="back">Back to Movies</button></a>
-				</div>	
+				</div>
+			</div>	
+		</div>
 
-				<div class="row">
+		<div class="row">
 				
+			<div class="modal fade" id="mymodal">
 
-				<div class="modal fade" id="mymodal">
-					<div class="modal-dialog">
-						<div class="modal-content">
-							<div class="modal-header">
-							 <button type="button" class="close" data-dismiss="modal">&times;</button>
-							 <h3 class="modal-theatre">Choose a Theatre</h3>
-							</div>
-							<div class="modal-body">
-								<form>
-									<div id="movieTheaterOne">
-										<h5 id="theatreName"></h5>
-										<div id="movieTimes"></div>
-									</div>
-								</form>
-							</div>	
-						<div class="modal-footer"></div>
+				<div class="modal-dialog">
+
+					<div class="modal-content">
+
+						<div class="modal-header">
+
+							<button type="button" class="close" data-dismiss="modal">&times;</button>
+
+							<h3 class="modal-theatre">Choose a Theatre</h3>
+						</div>
+
+						<div class="modal-body">
+
+							<form>
+								<div id="movieTheaterOne">
+
+									<h5 id="theatreName"></h5>
+									<div id="movieTimes"></div>
+								</div>
+							</form>
+						</div>
+
 						<button class="btn btn-default btn-block" id="submit" data-dismiss="modal">Submit</button>
 					</div>
 				</div>
 			</div>
 		</div>
-	</div>			
-</div>
+				
+		<div class="column-row">
 
-		  <div class="column-row">
-      <hr>
-      <ul class="tabs" data-tabs id="example-tabs">
-        <li class="tabs-title is-active"><a href="#panel1" aria-selected="true">Description</a></li>
-        <li class="tabs-title"><a href="#panel2">Trailer</a></li>
-        <li class="tabs-title"><a href="#panel3">Recommendations</a></li>
-      </ul>
+      		<ul class="tabs" data-tabs id="example-tabs">
 
-      <div class="tabs-content" data-tabs-content="example-tabs">
+        		<li class="tabs-title is-active"><a href="#panel1" aria-selected="true">Description</a></li>
+        		<li class="tabs-title"><a href="#panel2">Trailer</a></li>
+        		<li class="tabs-title"><a href="#panel3">Recommendations</a></li>
+      		</ul>
 
-        <div class="tabs-panel is-active" id="panel1">
+      		<div class="tabs-content" data-tabs-content="example-tabs">
 
-          <h4>Description</h4>
+        		<div class="tabs-panel is-active" id="panel1">
 
-          <div class="media-object stack-for-small">
-
-            <div id="moviePoster" class="media-object-section">
-
-              <img id="poster" class="thumbnail" src="http://placehold.it/200x200">
-            </div>
-
-            <div class="media-object-section">
-
-            	<h5 id="movieName"></h5>
-              	<p id="movieDescription"></p>
-              	<p id="actors"></p>
-              	<p id="runtime"></p>
-            </div>
-          </div>    
-       </div>
-
-
-        <div class="tabs-panel" id="panel2">
-
-          <div class="row large-12">
-            <div class="column">
+          			<h4>Description</h4>
+	
+          			<div class="media-object stack-for-small">
+	
+            			<div id="moviePoster" class="media-object-section">
+	
+              				<img id="poster" class="thumbnail" src="http://placehold.it/200x200">
+           				</div>
+	
+            			<div class="media-object-section">
+	
+            				<h5 id="movieName"></h5>
+              				<p id="movieDescription"></p>
+              				<p id="actors"></p>
+              				<p id="runtime"></p>
+            			</div>
+          			</div>    
+      			</div>
 
 
+        		<div class="tabs-panel" id="panel2">
 
-              <object class="trailer" style="width:560px; height:315px"></object>
-              <div class="notrailer"></div>
-            </div>
-     
-          </div>
+          			<div class="row large-12">
 
-        </div>
+            			<div class="column">
 
-		<div class="tabs-panel" id="panel3">
+              				<object class="trailer" style="width:560px; height:315px"></object>
+              				<div class="notrailer"></div>
+            			</div>
+        			</div>
+		        </div>
 
-	<h5>Here are some recommendations from fans who enjoyed this movie </h5><br>
+				<div class="tabs-panel" id="panel3">
 
-			<div id="recoPosters" class="row">
+					<h5>Here are some recommendations from fans who enjoyed this movie </h5><br>
 
-			</div>
-		</div>
-    </div>
-    </div>
-		<footer class="footer">
+					<div id="recoPosters" class="row"></div>
+				</div>
+    		</div>
+    	</div>
+	</div>
+
+	<footer class="footer">
 			
-				<p style="color: white">&copy; The Greatest Group Ever</p>
+		<p style="color: white">&copy; The Greatest Group Ever</p>
 			
-		</footer>
+	</footer>
 	
 
 	<!-- Javascript -->
