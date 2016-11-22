@@ -24,7 +24,7 @@ $(document).ready(function () {
 				
 				var columnBlock = $('<div class="col-md-2">');
 				var imagePoster = $('<img>');
-				var selectButton = $('<a href="secondPage.html"><button class="selectButton" onclick="myFunction"></button></a>');
+				var selectButton = $('<a href="secondPage.html">');
 				var movieID = results[i].id;
 				var imagePoster_link = $('<a href="secondPage.html">');
 
@@ -36,7 +36,6 @@ $(document).ready(function () {
 				var posterURL = 'https://image.tmdb.org/t/p/w500' + results[i].poster_path;
 				imagePoster.attr('src', posterURL);
 
-				selectButton.text("Select Movie");
 				selectButton.attr('movie-id', movieID);
 
 

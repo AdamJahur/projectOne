@@ -105,32 +105,28 @@ $(document).ready(function () {
 			method: 'GET'
 		}
 		
-
-		console.log("url", queryURL);
-
 		$.ajax(request).done(function(response) {
 
-			console.log("test", response);
+			var data = response.results[0].key;
 			
-			var data = response.results[i].key;
-			console.log(data);
 
-			// for (i = 0; i < data.length; i++) {
-			
-			
+			if (response.results[0].key) {
+
+
 			var trailerlink = ('https://www.youtube.com/embed/' + data);
-			$("#trailerkey").attr('width="560" height="315" src=', trailerlink);
-				console.log("trailer link", trailerlink);
+			$(".trailer").attr('data', trailerlink);
+				
+			}
+				else {
 
-			// }
+					$(".notrailer").attr('src', "http://placehold.it/100x100");
 
+			}
 
 		})
 	
 }
 	trailer();
-
-
 
 
 	// Testing & Debugging
