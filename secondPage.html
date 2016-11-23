@@ -66,174 +66,156 @@
 
 					</div>
 
-				<div class="row">
 
-					<div class="small-3 columns">
+					<div class="row">
 
-						<label for="middle-label" class="date-picker">Zip Code: </label>
+						<div class="small-3 columns">
 
-					</div>
+							<label for="middle-label" class="date-picker">Zip Code: </label>
 
-					<div class="small-9 columns">
+						</div>
 
-						<form action="javascript:0">
+						<div class="small-9 columns">
+
+							<form action="javascript:0">
 
 								<input type="text" required pattern="(\d{5}([\-]\d{4})?)" value name="postalcodes_pattern0" id="middle-label" list="postalcodes_pattern0_datalist" placeholder="12345">
 
-						</form>
-
+							</form>
+						</div>
 					</div>
-					
-				</div>
-							
 
-				</div>
 
-			</div>
-
-			<div title="Add to Calendar" class="addeventatc" data-direct="google">
+					<div title="Add to Calendar" class="addeventatc" data-direct="google">
 				Add to Calendar
 
-				<span class="start">12/07/2016 09:00 AM</span>
+						<span class="start">12/07/2016 09:00 AM</span>
 
-				<span class="end">12/07/2016 11:00 AM</span>
+						<span class="end">12/07/2016 11:00 AM</span>
 
-				<span class="timezone">America/New_York</span>
+						<span class="timezone">America/New_York</span>
 
-				<span class="title">Summary of the event</span>
+						<span class="title">Summary of the event</span>
 
-				<span class="description">Description of the event</span>
+						<span class="description">Description of the event</span>
 
-				<span class="location">Location of the event</span>
+						<span class="location">Location of the event</span>
 
-				<span class="date_format">MM/DD/YYYY</span>
+						<span class="date_format">MM/DD/YYYY</span>
 
-				<span class="client">aLvARxYCSzijhPOIGmAQ23599</span>
+						<span class="client">aLvARxYCSzijhPOIGmAQ23599</span>
 
-			</div>
+					</div>
 
-			<button class="btn btn-default navbar-btn" id="submit" data-toggle="modal" data-target="#mymodal">Theater Showtimes</button>
+					<button class="btn btn-default navbar-btn" id="submit" data-toggle="modal" data-target="#mymodal">Theater Showtimes</button>
 
-			<a href="firstPage.html"><button class="btn btn-default navbar-btn" id="back">Back to Movies</button></a>
-		</div>
-	</div>	
-</div>
-
-<div class="row">
-
-	<div class="modal fade" id="mymodal">
-
-		<div class="modal-dialog">
-
-			<div class="modal-content">
-
-				<div class="modal-header">
-
-					<button type="button" class="close" data-dismiss="modal">&times;</button>
-
-					<h3 class="modal-theatre">Choose a Theatre</h3>
-
+					<a href="firstPage.html"><button class="btn btn-default navbar-btn" id="back">Back to Movies</button></a>
 				</div>
-
-				<div class="modal-body">
-
-					<form>
-
-						<h5 id="theatreName"></h5>
-
-					</form>
-
-				</div>
-
-				<button class="btn btn-default btn-block" id="submit" data-dismiss="modal">Submit</button>
-
 			</div>
-
 		</div>
 
+		<div class="row">
+		
+				<div class="modal fade" id="mymodal">
+		
+				<div class="modal-dialog">
+		
+					<div class="modal-content">
+		
+						<div class="modal-header">
+		
+							<button type="button" class="close" data-dismiss="modal">&times;</button>
+		
+							<h3 class="modal-theatre">Choose a Theatre</h3>
+		
+						</div>
+		
+						<div class="modal-body">
+		
+							<form>
+		
+								<h5 id="theatreName"></h5>
+		
+							</form>
+		
+						</div>
+		
+						<button class="btn btn-default btn-block" id="submit" data-dismiss="modal">Submit</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="column-row">
+		
+			<ul class="tabs" data-tabs id="example-tabs">
+		
+				<li class="tabs-title is-active"><a href="#panel1" aria-selected="true">Description</a></li>
+		
+				<li class="tabs-title"><a href="#panel2">Trailer</a></li>
+		
+				<li class="tabs-title"><a href="#panel3">Recommendations</a></li>
+		
+			</ul>
+		
+			<div class="tabs-content" data-tabs-content="example-tabs">
+		
+				<div class="tabs-panel is-active" id="panel1">
+		
+					<div class="media-object stack-for-small">
+		
+						<div id="moviePoster" class="media-object-section">
+		
+							<img id="poster" class="thumbnail" src="http://placehold.it/200x200?text=No+Image">
+		
+						</div>
+		
+						<div class="media-object-section">
+		
+							<h5 id="movieName"></h5>
+		
+							<p id="movieDescription"></p>
+		
+							<p id="actors"></p>
+		
+							<p id="production"></p>
+		
+							<p id="genre"></p>
+		
+							<p id="runtime"></p>
+		
+						</div>
+					</div> 
+				</div>
+		
+				<div class="tabs-panel" id="panel2">
+		
+					<div class="row large-12">
+		
+						<div class="column">
+		
+							<object class="trailer" style="width:560px; height:315px"></object>
+		
+							<div class="notrailer"></div>
+						</div>
+					</div>
+				</div>
+		
+				<div class="tabs-panel" id="panel3">
+		
+					<h5>Here are some recommendations from fans who enjoyed this movie </h5><br>
+		
+					<div id="recoPosters" class="row"></div>
+				</div>
+			</div>
+		</div>
 	</div>
 
-</div>
+	<footer class="footer">
 
-<div class="column-row">
+		<p style="color: white">&copy; The Greatest Group Ever</p>
 
-	<ul class="tabs" data-tabs id="example-tabs">
-
-		<li class="tabs-title is-active"><a href="#panel1" aria-selected="true">Description</a></li>
-
-		<li class="tabs-title"><a href="#panel2">Trailer</a></li>
-
-		<li class="tabs-title"><a href="#panel3">Recommendations</a></li>
-
-	</ul>
-
-	<div class="tabs-content" data-tabs-content="example-tabs">
-
-		<div class="tabs-panel is-active" id="panel1">
-
-			<div class="media-object stack-for-small">
-
-				<div id="moviePoster" class="media-object-section">
-
-					<img id="poster" class="thumbnail" src="http://placehold.it/200x200?text=No+Image">
-
-				</div>
-
-				<div class="media-object-section">
-
-					<h5 id="movieName"></h5>
-
-					<p id="movieDescription"></p>
-
-					<p id="actors"></p>
-
-					<p id="production"></p>
-
-					<p id="genre"></p>
-
-					<p id="runtime"></p>
-
-				</div>
-
-			</div> 
-
-		</div>
-
-		<div class="tabs-panel" id="panel2">
-
-			<div class="row large-12">
-
-				<div class="column">
-
-					<object class="trailer" style="width:560px; height:315px"></object>
-
-					<div class="notrailer"></div>
-
-				</div>
-
-			</div>
-
-		</div>
-
-		<div class="tabs-panel" id="panel3">
-
-			<h5>Here are some recommendations from fans who enjoyed this movie </h5><br>
-
-			<div id="recoPosters" class="row"></div>
-
-		</div>
-
-	</div>
-
-</div>
-
-</div>
-
-<footer class="footer">
-
-	<p style="color: white">&copy; The Greatest Group Ever</p>
-
-</footer>
+	</footer>
 
 
 <!-- Javascript -->
