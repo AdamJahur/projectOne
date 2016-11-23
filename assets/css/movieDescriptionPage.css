@@ -14,15 +14,6 @@ body{
 .head{
 	margin-bottom: 40px;
 }
-.navbar-right{
-	margin-right: 40px;
-	color: blue;
-	background-color: white;
-	margin-top: -50px;
-	margin-bottom: 20px;
-	font-family: 'Raleway', 'sans-serif';
-	border-radius: 10%;
-}
 
 .navbar {
 	padding-top: 14px;
