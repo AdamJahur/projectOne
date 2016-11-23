@@ -26,13 +26,20 @@ $(document).ready(function () {
 
 			for (i = 0; i < response.length; i++) {
 
-				var theatreName = response[i].name;
-
 				var theatreDiv = $('<div>');
+				var timeDiv = $('<div>');
+				timeDiv.addClass('time');
+				timeDiv.attr('id', response[i].theatreId);
+
+				var theatreName = response[i].name;
+				var theatreNameDiv = $('<div>');
+
+				theatreNameDiv.text(theatreName);
+				theatreNameDiv.attr('theatre-name', theatreName);
 
 				theatreDiv.addClass('theatreDiv');
-				theatreDiv.attr('id', response[i].theatreId);
-				theatreDiv.html('<div class="theatreName">' + theatreName + '</div>');
+				theatreDiv.append(theatreNameDiv);
+				theatreDiv.append(timeDiv);
 
 				$('#theatreName').append(theatreDiv);
 			}
@@ -86,12 +93,13 @@ $(document).ready(function () {
 						var isPM = false;
 
 						if (hours >= 13){
+
 							hours-=12;
 							isPM = true;
-						}
-						else if(hours == 12){
+						} else if (hours == 12){
+
 							isPM = true;
-						}
+						};
 
 						var formatTime = hours + ":" + minutes;
 						formatTime+= (isPM) ? " PM" : " AM";
@@ -101,12 +109,13 @@ $(document).ready(function () {
 
 						// if (movie.showtimes[i].theatre.id === $(+)) {}
 
-					}
-				}	
-			}
+					};
+				};	
+			};
+
+			$('.time:empty').text("Test");
 		})
 	}
-
 
 	$('#submit').on('click', function() {
 
