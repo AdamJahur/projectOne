@@ -112,8 +112,6 @@ $(document).ready(function () {
 					};
 				};	
 			};
-
-			$('.time:empty').text("Test");
 		})
 	}
 
