@@ -3,21 +3,19 @@ $(document).ready(function () {
 	var movieID = localStorage.getItem('movieID');
 	var moviePoster = localStorage.getItem('movieURL');
 
-	function defaultDate () {
+// for calendar - disables previous dates 
+	$( function() {
+		$("#datepicker2").datepicker({
+		minDate: 0,
+		});
+  	});
 
-		var date = new Date();
-	
-		var day = date.getDate();
-		var month = date.getMonth() + 1;
-		var year = date.getFullYear();
-	
-		if (month < 10) month = "0" + month;
-		if (day < 10) day = "0" + day;
-	
-		var today = year + "-" + month + "-" + day;       
-		$("#date").attr("value", today);
-	}
+// sets current date in text box
+	$( function() {
+		$("#datepicker2").datepicker('setDate', new Date());
+  	});
 
+	
 	function multiImageFunction () {
 
 		var query = {
@@ -171,8 +169,7 @@ $(document).ready(function () {
 	movieDescription();
 	actorsName();
 	trailer();
-	defaultDate();
-
+	
 });
 
 
