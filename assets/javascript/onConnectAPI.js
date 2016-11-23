@@ -6,7 +6,9 @@ $(document).ready(function () {
 
 		var code = $('#middle-label').val();
 
-		var date = $('#date').val();
+		var date = $('#datepicker2').val();
+
+		console.log($('#datepicker2').val());
 
 		var query = {
 			api_key: "c8j5g22c7auwnc6s39v86ep8",
@@ -50,7 +52,7 @@ $(document).ready(function () {
 
 		var code = $('#middle-label').val();
 
-		var date = $('#date').val();
+		var date = $('#datepicker2').val();
 
 		$('#movieTimes').empty();
 		$('#theatreName').empty();
