@@ -85,8 +85,11 @@ $(document).ready(function () {
 
 						var isPM = false;
 
-						if (hours > 12){
+						if (hours >= 13){
 							hours-=12;
+							isPM = true;
+						}
+						else if(hours == 12){
 							isPM = true;
 						}
 
@@ -112,4 +115,3 @@ $(document).ready(function () {
 	});
 
 })
-
