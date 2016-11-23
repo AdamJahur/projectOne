@@ -35,7 +35,7 @@ $(document).ready(function () {
 
 				if (results[i].poster_path === null) {
 
-					return;
+					continue;
 
 				} else {
 					
