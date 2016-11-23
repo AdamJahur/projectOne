@@ -155,7 +155,6 @@ h4 {
 #movieName {
 	color: #03074B;
 }
-.addeventatc{
-	color: blue;
-	font-family: 'Raleway', 'sans-serif';
-}
+
+.time {
+	padding-top: 10px;
