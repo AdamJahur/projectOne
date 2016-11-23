@@ -2,7 +2,7 @@ $(document).ready(function () {
 
 	var movieID = localStorage.getItem('movieID');
 	var moviePoster = localStorage.getItem('movieURL');
-	
+
 	function defaultDate () {
 
 		var date = new Date();
@@ -35,11 +35,13 @@ $(document).ready(function () {
 
 			numImages = 4;
 
-			// console.log(response);
-
 			if (response.backdrops.length === 0) {
+
+				$('#movieImages').empty();
+
 				var blankImage = $('<img id="bigImage" class="thumbnail" src="http://placehold.it/650x350?text=No+Images">')
 				$('#movieImages').append(blankImage);
+				
 			} else {
 
 				var largeImage = $('#bigImage');
@@ -162,10 +164,7 @@ $(document).ready(function () {
 			}
 
 		})
-
-	
-}
-	
+	}
 
 	// Start Up Functions		
 	multiImageFunction();
@@ -173,7 +172,6 @@ $(document).ready(function () {
 	actorsName();
 	trailer();
 	defaultDate();
-
 
 });
 
