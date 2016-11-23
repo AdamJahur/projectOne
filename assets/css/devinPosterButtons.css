@@ -52,15 +52,8 @@ button {
 .col-md-2 {
 	text-align: center;
 }
-.navbar-right{
-	margin-right: 40px;
-	color: blue;
-	background-color: white;
-	margin-top: -22px;
-	margin-bottom: 20px;
-}
 h3{
-	height: 18px;
+	height: 50px;
 	color: white;
 	font-family: 'Great Vibes', 'cursive';
 	font-size: 30pt;
