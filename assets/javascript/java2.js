@@ -88,10 +88,10 @@ $(document).ready(function () {
 			var image = ('https://image.tmdb.org/t/p/w500' + moviePoster);
 			var title = response.title;
 			var tagLine = response.tagline;
-			var runtime = ("Runtime: " + response.runtime + " min");
+			var runtime = ("<strong>Runtime:</strong> " + response.runtime + " min");
 			var overview = response.overview;
-			var production = ("Production Company: " + response.production_companies[0].name);
-			var genre =  ("Genre: " + response.genres[0].name);
+			var production = ("<strong>Production Company:</strong> " + response.production_companies[0].name);
+			var genre =  ("<strong>Genre:</strong> " + response.genres[0].name);
 			
 
 			$('#poster').attr('src', image);
@@ -120,13 +120,15 @@ $(document).ready(function () {
 	
 		$.ajax(request).done(function(response) {
 				
-			$('#actors').html("Starring: ")
+			$('#actors').html("<strong>Starring:</strong> ")
 	
 			for(i = 0; i < response.cast.length && i < 5; i++) {
-	
 				var crew = response.cast[i].name;
 				$('#actors').append(crew).append(", ");
+
+
 			}
+			$('#actors').append(response.cast[5].name);
 		});
 	};
 

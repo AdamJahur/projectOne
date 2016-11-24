@@ -44,7 +44,7 @@ body{
 .row{
 	font-family: 'Raleway', 'sans-serif';
 }
-#submit, #addCal, #back{
+#submit, #addCal, #back #submitOne{
 	color: blue;
 	font-family: 'Raleway', 'sans-serif';
 }
@@ -158,3 +158,5 @@ h4 {
 
 .time {
 	padding-top: 10px;
+
+}
