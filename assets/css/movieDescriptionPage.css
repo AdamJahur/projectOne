@@ -73,15 +73,13 @@ body{
 #calendarbutton {
 	position: absolute;
 	clear: both;
-	/*margin-top: -500px;*/
 }
 #back {
 	margin-bottom: 5px;
+	margin-left: 162px; 
 }
 #buttonstyling {
-    margin-left: 180px; 
-    /*margin-top: 20px;*/
-
+    margin-left: 40px;
  }
 
  h3, h4, h5{
