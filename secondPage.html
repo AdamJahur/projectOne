@@ -13,6 +13,19 @@
 	<link rel="stylesheet" href="http://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.min.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/movieDescriptionPage.css">
 
+	<!-- I had to put the jquery script source here and not at the bottom so that the calendar would load -->
+	<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+	<script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+
+<script>
+// does not allow user to input any characters. Erases immediately.   
+	function clean (e){
+		var textfield = document.getElementById(e);
+		var regex = /[^]/g;
+		textfield.value = textfield.value.replace(regex,"");
+		}
+</script>
+
 </head>
 
 <body>
@@ -60,7 +73,7 @@
 
 						<div class="small-9 columns">
 
-							<input type="date" id="date">
+							<input type="text" id="datepicker2" onkeyup="clean('datepicker2')" onkeydown="clean('datepicker2')">
 
 						</div>
 
@@ -222,7 +235,7 @@
 
 <!-- Javascript -->
 
-<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+
 <script src="http://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.js"></script>
 <script>$(document).foundation();</script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
@@ -231,5 +244,6 @@
 <script src="assets/javascript/recoTab.js"></script>
 <!-- AddEvent -->
 <script type="text/javascript" src="https://addevent.com/libs/atc/1.6.1/atc.min.js" async defer></script>
+<script src="assets/javascript/nyt.js"></script>
 </body>
 </html>

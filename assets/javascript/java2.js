@@ -3,20 +3,18 @@ $(document).ready(function () {
 	var movieID = localStorage.getItem('movieID');
 	var moviePoster = localStorage.getItem('movieURL');
 	
-	function defaultDate () {
+	// for calendar - disables previous dates 
+	$( function() {
+		$("#datepicker2").datepicker({
+		minDate: 0,
+		dateFormat: 'yy-mm-dd',
+		});
+  	});
 
-		var date = new Date();
-	
-		var day = date.getDate();
-		var month = date.getMonth() + 1;
-		var year = date.getFullYear();
-	
-		if (month < 10) month = "0" + month;
-		if (day < 10) day = "0" + day;
-	
-		var today = year + "-" + month + "-" + day;       
-		$("#date").attr("value", today);
-	}
+  	// sets current date in text box
+	$( function() {
+		$("#datepicker2").datepicker('setDate', new Date());
+  	});
 
 	function multiImageFunction () {
 
@@ -90,10 +88,10 @@ $(document).ready(function () {
 			var image = ('https://image.tmdb.org/t/p/w500' + moviePoster);
 			var title = response.title;
 			var tagLine = response.tagline;
-			var runtime = ("Runtime: " + response.runtime + " min");
+			var runtime = ("<strong>Runtime:</strong> " + response.runtime + " min");
 			var overview = response.overview;
-			var production = ("Production Company: " + response.production_companies[0].name);
-			var genre =  ("Genre: " + response.genres[0].name);
+			var production = ("<strong>Production Company:</strong> " + response.production_companies[0].name);
+			var genre =  ("<strong>Genre:</strong> " + response.genres[0].name);
 			
 
 			$('#poster').attr('src', image);
@@ -122,13 +120,15 @@ $(document).ready(function () {
 	
 		$.ajax(request).done(function(response) {
 				
-			$('#actors').html("Starring: ")
+			$('#actors').html("<strong>Starring:</strong> ")
 	
 			for(i = 0; i < response.cast.length && i < 5; i++) {
-	
 				var crew = response.cast[i].name;
 				$('#actors').append(crew).append(", ");
+
+
 			}
+			$('#actors').append(response.cast[5].name);
 		});
 	};
 
@@ -174,7 +174,7 @@ $(document).ready(function () {
 	movieDescription();
 	actorsName();
 	trailer();
-	defaultDate();
+	
 
 
 });
