@@ -45,9 +45,22 @@ body{
 	font-family: 'Raleway', 'sans-serif';
 }
 #submit, #addCal, #back{
+	color: black;
+	font-family: 'Helvetica Neue', 'sans-serif';
+	font-weight: 300;
+	font-size: 15px;
+}
+
+.navbar-btn
+
+
+/*#calendarbutton {
+	float: left;
+	margin-right: 10px;
 	color: blue;
 	font-family: 'Raleway', 'sans-serif';
-}
+}*/
+
 h3, h4, h5{
 	font-family: 'Raleway', 'sans-serif';
 }
@@ -57,6 +70,12 @@ h3, h4, h5{
 h3, .date-picker, .middle{
 	color: blue;
 }
+
+/*.buttonstyling {
+    height: 48px;
+    width: 588px;
+    margin: 2em auto;   
+    }*/
 
 h3 a {
 	font-family: 'Great Vibes', 'cursive';
@@ -158,3 +177,4 @@ h4 {
 
 .time {
 	padding-top: 10px;
+}
