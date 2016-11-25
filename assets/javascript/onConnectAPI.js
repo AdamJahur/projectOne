@@ -23,6 +23,7 @@ $(document).ready(function () {
 			url: queryURL,
 			method: 'GET'
 		}
+		
 
 		$.ajax(request).done(function(response) {
 
