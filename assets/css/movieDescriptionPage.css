@@ -41,14 +41,45 @@ body{
 	font-family: 'Raleway', 'sans-serif';
 	
 }
+
 .row{
 	font-family: 'Raleway', 'sans-serif';
 }
-#submit, #addCal, #back{
-	color: blue;
-	font-family: 'Raleway', 'sans-serif';
+
+#submit, #addCal, #back, #submitOne{
+
+	font-family: Roboto,"Helvetica Neue",Helvetica,Optima,Segoe,"Segoe UI",Candara,Calibri,Arial,sans-serif;
+    color: #000!important;
+    font-weight: 300;
+    line-height: 100%!important;
+    background-color: #fff;
+    border: 1px solid;
+    border-color: #e5e6e9 #dfe0e4 #d0d1d5;
+    font-size: 15px;
+    text-decoration: none;
+    padding: 9px 12px 12px 12px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    cursor: pointer;
+    -webkit-font-smoothing: antialiased!important;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    margin-bottom: -30px;
+    position: absolute;
+    margin-left: 5px;
 }
-h3, h4, h5{
+.glyphicon {
+    font-size: 18px;
+}
+#calendarbutton {
+	position: absolute;
+	clear: both;
+}
+#buttonstyling {
+    margin-left: -153px;
+ }
+
+ h3, h4, h5{
 	font-family: 'Raleway', 'sans-serif';
 }
 .tabs-title>a{
@@ -57,7 +88,6 @@ h3, h4, h5{
 h3, .date-picker, .middle{
 	color: blue;
 }
-
 h3 a {
 	font-family: 'Great Vibes', 'cursive';
 	font-size: 30pt;
@@ -77,7 +107,7 @@ h3 a {
     padding: 30px;
     height: 300px;
     margin: 0 0 40px 0;
-   	width: 500px;
+   	width: 550px;
     border: 1px solid #dddddd;
 }
 
@@ -158,3 +188,4 @@ h4 {
 
 .time {
 	padding-top: 10px;
+}
