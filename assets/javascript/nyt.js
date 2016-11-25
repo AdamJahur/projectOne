@@ -41,6 +41,7 @@ $(document).ready(function () {
 			$('#review').append(pubdate);
 			$('#review').append(summary);
 			$('#review').append(linkMessage);
+			$('#review').append(copyright);
 
 		})
 	}
