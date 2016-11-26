@@ -24,22 +24,22 @@ $(document).ready(function () {
 	
 			var review = response.results[0];
 			
-			var copyright = $('<div>').attr('id', copyright).text(response.copyright);
+			var copyright = $('<div class="copyright">').attr('id', copyright).text(response.copyright);
 	
-			var author = $('<div>').attr('id', "review").text(review.byline);
-			var head = $('<div>').attr('id', "head").text(review.headline);
-			var pubdate = $('<div>').attr('id', "date").text(review.publication_date);
-			var summary = $('<div>').attr('id', "short").text(review.summary_short);
+			var author = $('<div class="author">').attr('id', "review").text(review.byline);
+			var head = $('<div class="head">').attr('id', "head").text(review.headline);
+			var pubdate = $('<div class="pubdate">').attr('id', "date").text(review.publication_date);
+			var summary = $('<div class="summary">').attr('id', "short").text(review.summary_short);
 	
-			var linkMessage = $('<div>').attr('id', "link")
+			var linkMessage = $('<div class="linkMessage">').attr('id', "link")
 			var link = $('<a href=' + review.link.url + '>').text("Click here to visit article page.");
 
 			linkMessage.append(link);
 	
 			$('#review').append(head);
 			$('#review').append(author);
-			$('#review').append(pubdate);
-			$('#review').append(summary);
+			$('#review').append(pubdate).append('<br />');
+			$('#review').append(summary).append('<br />');
 			$('#review').append(linkMessage);
 			$('#review').append(copyright);
 
