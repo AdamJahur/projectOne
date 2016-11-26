@@ -38,10 +38,10 @@ $(document).ready(function () {
 	
 			$('#review').append(head);
 			$('#review').append(author);
-			$('#review').append(pubdate).append('<br />');
-			$('#review').append(summary).append('<br />');
+			$('#review').append(pubdate).append('<br/>');
+			$('#review').append(summary).append('<br/>'); 
 			$('#review').append(linkMessage);
-			$('#review').append(copyright);
+			$('#review').append(copyright); 
 
 		})
 	}
