@@ -26,7 +26,7 @@ $(document).ready(function () {
 			
 			var copyright = $('<div class ="copyright">').attr('id', copyright).text(response.copyright);
 	
-			var author = $('<div class="author>').attr('id', "review").text(review.byline);
+			var author = $('<div class="author">').attr('id', "review").text(review.byline);
 			var head = $('<div>').attr('id', "head").text(review.headline);
 			var pubdate = $('<div>').attr('id', "date").text(review.publication_date);
 			var summary = $('<div>').attr('id', "short").text(review.summary_short);
@@ -38,9 +38,9 @@ $(document).ready(function () {
 	
 			$('#review').append(head);
 			$('#review').append(author);
-			$('#review').append(pubdate).append('<br/>');
-			$('#review').append(summary).append('<br/>'); 
-			$('#review').append(linkMessage);
+			$('#review').append(pubdate).append('<br/>, <br/>');
+			$('#review').append(summary).append('<br/>, <br/>'); 
+			$('#review').append(linkMessage).append('<br/>');
 			$('#review').append(copyright); 
 
 		})
