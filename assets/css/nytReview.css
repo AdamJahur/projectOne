@@ -8,7 +8,7 @@
 	color: white;
 } 
 
-.copyright{
+#copyright{
 	
 	margin: 0 auto;
 	text-align: center;
@@ -24,7 +24,7 @@
 div#review.author::before {content: ' Written By:  ';
 }
 
-.head{
+#head{
 	font-size: 24px;
 	font-weight: bold;
 	font-family: 'Raleway', 'sans-serif';
@@ -36,7 +36,7 @@ div#review.author::before {content: ' Written By:  ';
 	padding-left: 220px;
 }
 
-.linkMessage{
+#link{
 	text-align: center;
 	margin: 0 auto;
 	max-width: 800px;
@@ -53,7 +53,7 @@ div#review.author::before {content: ' Written By:  ';
 	background-size: 100%; 
 }
 
-.pubdate{ 
+#date{ 
     margin: 0 auto;
 	text-align: center;
 	max-width: 800px;
@@ -75,6 +75,17 @@ div#review.author::before {content: ' Written By:  ';
    color: gold;
 }
 
+#short{
+	font-weight: bold;
+	margin: 0 auto;
+	text-align: center;
+	font-family: 'Raleway', 'sans-serif';
+	max-width: 700px;
+	padding-left: 280px;
+	font-style: italic;
+	color: gold;
+}
+
 .stars{
 	padding-left: 575px;
 }
@@ -87,16 +98,7 @@ div#review.author::before {content: ' Written By:  ';
 	max-width: 800px;	
 } 
 
-.summary{
-	font-weight: bold;
-	margin: 0 auto;
-	text-align: center;
-	font-family: 'Raleway', 'sans-serif';
-	max-width: 700px;
-	padding-left: 280px;
-	font-style: italic;
-	color: gold;
-}
+
 
 
 
