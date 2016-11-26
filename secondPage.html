@@ -95,14 +95,35 @@
 
 								<input type="text" required pattern="(\d{5}([\-]\d{4})?)" value name="postalcodes_pattern0" id="middle-label" list="postalcodes_pattern0_datalist" placeholder="12345">
 								
-								<div id="buttonstyling">
-								<button class="btn btn-default navbar-btn" id="submit" data-toggle="modal" data-target="#mymodal"><span class="glyphicon glyphicon-film" aria-hidden="true" style='padding-right: 8px;'></span>Theater Showtimes</button>
-								</div>
+								
 							</form>
 						</div>
 					</div>
 
+					<div class="row">
 
+						<div class="small-3 columns">
+
+							<label for="middle-label" class="date-picker">Radius: </label>
+
+						</div>
+
+						<div class="small-9 columns">
+
+							<div class="form-group">
+								<select class="form-control" id="radiusSelect">
+									<option value=5 selected>5</option>
+									<option value=15>15</option>
+									<option value=25>25</option>
+								</select>			  
+							</div>
+						</div>
+					</div>
+
+						<div id="buttonstyling">
+								<button class="btn btn-default navbar-btn" id="submit" data-toggle="modal" data-target="#mymodal"><span class="glyphicon glyphicon-film" aria-hidden="true" style='padding-right: 8px;'></span>Theater Showtimes</button>
+								</div>
+					
 					<div title="Add to Calendar" style='margin-top: 8px; margin-left: 162px;' class="addeventatc" id="calendarbutton" data-direct="google">
 				Add to Calendar
 
