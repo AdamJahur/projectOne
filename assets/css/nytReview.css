@@ -45,11 +45,11 @@ div#review.author::before {content: ' Written By:  ';
 }
 
 #panel4{
-    width: 95%;
-    height: 80%;
+    width: 100%;
+    height: 100%;
     background-color: white;
     box-shadow: 10px 10px 5px #888888;
-	background: url(../images/clap2.png) no-repeat;
+	background: url(../images/projector.png) no-repeat;
 	background-size: 100%; 
 }
 
@@ -76,7 +76,7 @@ div#review.author::before {content: ' Written By:  ';
 }
 
 .stars{
-	padding-left: 543px;
+	padding-left: 575px;
 }
  
 .stars,.stars1, .stars2, .stars3, .stars4, .stars5{
