@@ -1,26 +1,27 @@
 .author{
-	font-size: 12px;
+	font-size: 14px;
 	margin: 0 auto;
 	text-align: center;
-	max-width: 800px;
-	padding-left: 210px;
-	font-family: 'Raleway', 'sans-serif';
-	color: white;
+	font-family: 'Raleway', 'sans-serif';	
 } 
 
 .copyright{
-	
 	margin: 0 auto;
 	text-align: center;
-	max-width: 800px;
-	padding-left: 250px;
 	font-style: italic;
 	font-size: 12px;
-	font-family: 'Raleway', 'sans-serif';
-	color: white;
+	font-family: 'Raleway', 'sans-serif';	
+}
+
+#date{ 
+    margin: 0 auto;
+	text-align: center;
+    font-family: 'Raleway', 'sans-serif';
+    font-size: 15px;
 }
 
 div#review.author::before {content: ' Written By:  ';
+	font-size: 14;
 }
 
 #head{
@@ -29,37 +30,21 @@ div#review.author::before {content: ' Written By:  ';
 	font-family: 'Raleway', 'sans-serif';
 	font-style: italic;
 	text-align: center;
-	margin: 0 auto;	
-	color: gold;
-	max-width: 600px;
-	padding-left: 220px;
+	margin: 0 auto;		
 }
 
 #link{
 	text-align: center;
 	margin: 0 auto;
-	max-width: 800px;
-	padding-left: 230px;
-	font-family: 'Raleway', 'sans-serif';	
+	font-family: 'Raleway', 'sans-serif';
+
 }
 
 #panel4{
     width: 100%;
     height: 100%;
     background-color: white;
-    box-shadow: 10px 10px 5px #888888;
-	background: url(../images/projector.png) no-repeat;
-	background-size: 100%; 
-}
-
-#date{ 
-    margin: 0 auto;
-	text-align: center;
-	max-width: 800px;
-	padding-left: 210px;
-    font-family: 'Raleway', 'sans-serif';
-    color: white;
-    font-size: 12px;
+    box-shadow: 10px 10px 5px #888888;	
 }
 
 #review{
@@ -70,8 +55,8 @@ div#review.author::before {content: ' Written By:  ';
 #review > span:hover:before,
 #review > span:hover ~ span:before {
    content: "\2605";
-   position: absolute;
-   color: gold;
+   position: absolute; 
+   color: gold; 
 }
 
 #short{
@@ -79,14 +64,12 @@ div#review.author::before {content: ' Written By:  ';
 	margin: 0 auto;
 	text-align: center;
 	font-family: 'Raleway', 'sans-serif';
-	max-width: 700px;
-	padding-left: 280px;
+	max-width: 530px;
 	font-style: italic;
-	color: gold;
 }
 
 .stars{
-	padding-left: 575px;
+	padding-left: 450px;
 }
  
 .stars,.stars1, .stars2, .stars3, .stars4, .stars5{

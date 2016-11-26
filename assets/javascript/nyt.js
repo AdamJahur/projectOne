@@ -36,11 +36,11 @@ $(document).ready(function () {
 
 			linkMessage.append(link);
 	
-			$('#review').append(head);
+			$('#review').append(head).append('</br>');
 			$('#review').append(author);
 			$('#review').append(pubdate).append('<br/>, <br/>');
 			$('#review').append(summary).append('<br/>, <br/>'); 
-			$('#review').append(linkMessage).append('<br/>');
+			$('#review').append(linkMessage);
 			$('#review').append(copyright); 
 
 		})
