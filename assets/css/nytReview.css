@@ -8,13 +8,12 @@
 	color: white;
 } 
 
-#copyright{
+.copyright{
 	
 	margin: 0 auto;
 	text-align: center;
 	max-width: 800px;
 	padding-left: 250px;
-	
 	font-style: italic;
 	font-size: 12px;
 	font-family: 'Raleway', 'sans-serif';

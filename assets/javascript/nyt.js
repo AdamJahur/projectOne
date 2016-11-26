@@ -24,7 +24,7 @@ $(document).ready(function () {
 
 			var review = response.results[0];
 			
-			var copyright = $('<div>').attr('id', copyright).text(response.copyright);
+			var copyright = $('<div class ="copyright">').attr('id', copyright).text(response.copyright);
 	
 			var author = $('<div class="author>').attr('id', "review").text(review.byline);
 			var head = $('<div>').attr('id', "head").text(review.headline);
