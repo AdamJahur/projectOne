@@ -123,6 +123,6 @@ $(document).ready(function () {
 
 		theatreLocation();
 		theatreTime();
-	});
 
+	});
 })
