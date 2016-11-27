@@ -17,7 +17,7 @@ $(document).ready(function () {
 			radius: radius
 		}
 
-		var queryURL = "http://data.tmsapi.com/v1.1/theatres?" + $.param(query);
+		var queryURL = "https://data.tmsapi.com/v1.1/theatres?" + $.param(query);
 
 		var request = {
 			url: queryURL,
@@ -66,7 +66,7 @@ $(document).ready(function () {
 			radius: radius
 		}
 
-		var queryURL = "http://data.tmsapi.com/v1.1/movies/showings?" + $.param(query);
+		var queryURL = "https://data.tmsapi.com/v1.1/movies/showings?" + $.param(query);
 
 		var request = {
 			url: queryURL,
