@@ -8,13 +8,15 @@ $(document).ready(function () {
 
 		var date = $('#datepicker2').val();
 
+		var radius = $('#radiusSelect').val();
+
 		console.log($('#datepicker2').val());
 
 		var query = {
 			api_key: "c8j5g22c7auwnc6s39v86ep8",
 			zip: code,
 			startDate: date,
-			radius: "10"
+			radius: radius
 		}
 
 		var queryURL = "http://data.tmsapi.com/v1.1/theatres?" + $.param(query);
@@ -54,6 +56,8 @@ $(document).ready(function () {
 
 		var date = $('#datepicker2').val();
 
+		var radius = $('#radiusSelect').val();
+
 		$('#movieTimes').empty();
 		$('#theatreName').empty();
 
@@ -61,7 +65,7 @@ $(document).ready(function () {
 			api_key: "c8j5g22c7auwnc6s39v86ep8",
 			zip: code,
 			startDate: date,
-			radius: "10"
+			radius: radius
 		}
 
 		var queryURL = "http://data.tmsapi.com/v1.1/movies/showings?" + $.param(query);
@@ -126,10 +130,18 @@ $(document).ready(function () {
 		})
 	}
 
+	function noShowTime () {
+
+		if ( $('#6315').is(':empty')) {
+
+			console.log("Test");
+		}
+	}
 	$('#submit').on('click', function() {
 
 		theatreLocation();
 		theatreTime();
+		noShowTime();
 	});
 
 })
