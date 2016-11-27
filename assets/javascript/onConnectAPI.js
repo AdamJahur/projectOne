@@ -86,6 +86,7 @@ $(document).ready(function () {
 						// Time
 
 						var timeButton = $('<button type="button" class="btn btn-warning">');
+						timeButton.on('click', click);
 						var time = movie.showtimes[i].dateTime;
 						var theatreId = movie.showtimes[i].theatre.id;
 
@@ -125,4 +126,20 @@ $(document).ready(function () {
 		theatreTime();
 
 	});
+
+	function click () {
+
+		var time = $(this).text();
+
+		var date = $(this).attr('movie-time')
+
+		date = date.substring(0, 10);
+
+		console.log(date);
+
+		$('#date').html(date);
+
+		$('#start').html(time);
+	}
+
 })
