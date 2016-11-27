@@ -121,10 +121,18 @@ $(document).ready(function () {
 		})
 	}
 
+	function noShowTime () {
+
+		if ( $('#6315').is(':empty')) {
+
+			console.log("Test");
+		}
+	}
 	$('#submit').on('click', function() {
 
 		theatreLocation();
 		theatreTime();
+		noShowTime();
 	});
 
 })
