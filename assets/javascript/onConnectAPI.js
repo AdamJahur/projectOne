@@ -2,6 +2,8 @@ $(document).ready(function () {
 
 	var movieTitle = localStorage.getItem('movieTitle');
 
+	$('#description').html(movieTitle);
+
 	function theatreLocation () {
 
 		var code = $('#middle-label').val();
