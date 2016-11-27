@@ -89,6 +89,7 @@ $(document).ready(function () {
 
 						var timeButton = $('<button type="button" class="btn btn-warning">');
 						timeButton.on('click', click);
+						timeButton.attr('theatre', movie.showtimes[i].theatre.name);
 						var time = movie.showtimes[i].dateTime;
 						var theatreId = movie.showtimes[i].theatre.id;
 
@@ -132,16 +133,14 @@ $(document).ready(function () {
 	function click () {
 
 		var time = $(this).text();
-
-		var date = $(this).attr('movie-time')
+		var date = $(this).attr('movie-time');
+		var theatre = $(this).attr('theatre');
 
 		date = date.substring(0, 10);
 
-		console.log(date);
-
 		$('#date').html(date);
-
 		$('#start').html(time);
+		$('#location').html(theatre);
 	}
 
 })
