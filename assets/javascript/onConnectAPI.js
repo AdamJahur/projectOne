@@ -10,8 +10,6 @@ $(document).ready(function () {
 
 		var radius = $('#radiusSelect').val();
 
-		console.log($('#datepicker2').val());
-
 		var query = {
 			api_key: "c8j5g22c7auwnc6s39v86ep8",
 			zip: code,
@@ -121,18 +119,10 @@ $(document).ready(function () {
 		})
 	}
 
-	function noShowTime () {
-
-		if ( $('#6315').is(':empty')) {
-
-			console.log("Test");
-		}
-	}
 	$('#submit').on('click', function() {
 
 		theatreLocation();
 		theatreTime();
-		noShowTime();
-	});
 
+	});
 })
