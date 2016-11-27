@@ -65,6 +65,7 @@ $(document).ready(function () {
 		}
 
 		var queryURL = "http://data.tmsapi.com/v1.1/movies/showings?" + $.param(query);
+		console.log(queryURL);
 
 		var request = {
 			url: queryURL,
@@ -86,6 +87,8 @@ $(document).ready(function () {
 						var timeButton = $('<button type="button" class="btn btn-warning">');
 						var time = movie.showtimes[i].dateTime;
 						var theatreId = movie.showtimes[i].theatre.id;
+						console.log("time", time);
+
 
 						$('#' + theatreId).append(timeButton);
 
@@ -103,6 +106,12 @@ $(document).ready(function () {
 							isPM = true;
 						};
 
+						if  (time === null) {
+							$(".time").html("No time available.");
+
+
+						};
+
 						var formatTime = hours + ":" + minutes;
 						formatTime+= (isPM) ? " PM" : " AM";
 
@@ -113,6 +122,7 @@ $(document).ready(function () {
 
 					};
 				};	
+
 			};
 		})
 	}
