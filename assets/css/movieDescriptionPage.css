@@ -76,7 +76,7 @@ body{
 	clear: both;
 }
 #buttonstyling {
-    margin-left: -153px;
+    margin-left: -26px;
  }
 
  h3, h4, h5{
@@ -105,10 +105,11 @@ h3 a {
 #userinput {
 	background: white;
     padding: 30px;
-    height: 300px;
+    height: 350px;
     margin: 0 0 40px 0;
    	width: 550px;
     border: 1px solid #dddddd;
+
 }
 
 .column-row {

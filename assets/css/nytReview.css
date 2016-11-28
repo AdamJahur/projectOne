@@ -1,0 +1,86 @@
+.author{
+	font-size: 14px;
+	margin: 0 auto;
+	text-align: center;
+	font-family: 'Raleway', 'sans-serif';	
+} 
+
+.copyright{
+	margin: 0 auto;
+	text-align: center;
+	font-style: italic;
+	font-size: 12px;
+	font-family: 'Raleway', 'sans-serif';	
+}
+
+#date{ 
+    margin: 0 auto;
+	text-align: center;
+    font-family: 'Raleway', 'sans-serif';
+    font-size: 15px;
+}
+
+div#review.author::before {content: ' Written By:  ';
+	font-size: 14;
+}
+
+#head{
+	font-size: 24px;
+	font-weight: bold;
+	font-family: 'Raleway', 'sans-serif';
+	font-style: italic;
+	text-align: center;
+	margin: 0 auto;		
+}
+
+#link{
+	text-align: center;
+	margin: 0 auto;
+	font-family: 'Raleway', 'sans-serif';
+
+}
+
+#panel4{
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    box-shadow: 10px 10px 5px #888888;	
+}
+
+#review{
+  unicode-bidi: bidi-override;
+  direction: ltr;
+}
+
+#review > span:hover:before,
+#review > span:hover ~ span:before {
+   content: "\2605";
+   position: absolute; 
+   color: gold; 
+}
+
+#short{
+	font-weight: bold;
+	margin: 0 auto;
+	text-align: center;
+	font-family: 'Raleway', 'sans-serif';
+	max-width: 530px;
+	font-style: italic;
+}
+
+.stars{
+	padding-left: 450px;
+}
+ 
+.stars,.stars1, .stars2, .stars3, .stars4, .stars5{
+	font-size: 250%;
+	display: inline-block;
+	margin: 0 auto;
+	text-align: center;
+	max-width: 800px;	
+} 
+
+
+
+
+

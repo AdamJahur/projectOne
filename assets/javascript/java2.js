@@ -164,16 +164,20 @@ $(document).ready(function () {
 			}
 
 		})
+	}
+	
+	function startDate () {
 
-	
-}
-	
+		var x = new Date();
+		console.log(x);
+	}
 
 	// Start Up Functions		
 	multiImageFunction();
 	movieDescription();
 	actorsName();
 	trailer();
+	startDate();
 	
 
 
