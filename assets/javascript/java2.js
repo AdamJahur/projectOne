@@ -3,6 +3,24 @@ $(document).ready(function () {
 	var movieID = localStorage.getItem('movieID');
 	var moviePoster = localStorage.getItem('movieURL');
 	
+	function startDate () {
+
+		var newDate = new Date();
+		newDate = newDate.toLocaleString();
+
+		console.log(newDate);
+
+		var date = newDate.substring(0, 10);
+
+		var time = newDate.substring(12, 16);
+		var ampm = newDate.substring(20,22);
+		time = (time + " " + ampm);
+
+		$('#date').html(date);
+		$('#start').html(time);
+		console.log(date.toLocaleString());
+	}
+
 	// for calendar - disables previous dates 
 	$( function() {
 		$("#datepicker2").datepicker({
@@ -165,12 +183,6 @@ $(document).ready(function () {
 
 		})
 	}
-	
-	function startDate () {
-
-		var x = new Date();
-		console.log(x);
-	}
 
 	// Start Up Functions		
 	multiImageFunction();
@@ -178,8 +190,6 @@ $(document).ready(function () {
 	actorsName();
 	trailer();
 	startDate();
-	
-
 
 });
 
