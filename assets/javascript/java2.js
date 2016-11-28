@@ -11,13 +11,15 @@ $(document).ready(function () {
 		console.log(newDate);
 
 		var date = newDate.substring(0, 10);
+
 		var time = newDate.substring(12, 16);
+		var ampm = newDate.substring(20,22);
+		time = (time + " " + ampm);
 
 		$('#date').html(date);
+		$('#start').html(time);
 		console.log(date.toLocaleString());
 	}
-
-	startDate();
 
 	// for calendar - disables previous dates 
 	$( function() {
@@ -187,6 +189,7 @@ $(document).ready(function () {
 	movieDescription();
 	actorsName();
 	trailer();
+	startDate();
 
 });
 
