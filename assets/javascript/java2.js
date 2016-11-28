@@ -55,7 +55,7 @@ $(document).ready(function () {
 
 				$('#movieImages').empty();
 
-				var blankImage = $('<img id="bigImage" class="thumbnail" src="http://placehold.it/650x350?text=No+Images">')
+				var blankImage = $('<img id="bigImage" class="thumbnail" src="https://placehold.it/650x350?text=No+Images">')
 				$('#movieImages').append(blankImage);
 				
 			} else {
@@ -177,7 +177,7 @@ $(document).ready(function () {
 			}
 				else {
 
-					$(".notrailer").attr('src', "http://placehold.it/100x100");
+					$(".notrailer").attr('src', "https://placehold.it/100x100");
 
 			}
 
