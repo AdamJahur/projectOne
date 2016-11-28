@@ -17,8 +17,11 @@ $(document).ready(function () {
 		time = (time + " " + ampm);
 
 		$('#date').html(date);
+		$('#endDate').html(date);
 		$('#start').html(time);
+		$('endTime').html(endTime);
 		console.log(date.toLocaleString());
+
 	}
 
 	// for calendar - disables previous dates 
