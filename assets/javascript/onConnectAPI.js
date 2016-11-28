@@ -92,17 +92,10 @@ $(document).ready(function () {
 						timeButton.attr('theatre', movie.showtimes[i].theatre.name);
 						var time = movie.showtimes[i].dateTime;
 						var theatreId = movie.showtimes[i].theatre.id;
-						var noMovie = $('<p>No times available</p>');
 
-						if (movie.showtimes.length >= 1){
 
-							$('#' + theatreId).append(timeButton);
-
-						} else {
-
-							$('#' + theatreId).append(noMovie);
-							
-						}	
+						$('#' + theatreId).append(timeButton);
+	
 
 						var hours = time.substring(11, 13);
 						var minutes = time.substring(14, 16);
