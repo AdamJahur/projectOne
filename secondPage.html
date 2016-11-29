@@ -96,7 +96,6 @@
 								<input type="text" required pattern="(\d{5}([\-]\d{4})?)" value name="postalcodes_pattern0" id="middle-label" list="postalcodes_pattern0_datalist" placeholder="12345">
 								
 								
-							</form>
 						</div>
 					</div>
 
@@ -111,10 +110,10 @@
 						<div class="small-9 columns">
 
 							<div class="form-group">
-								<select class="form-control" id="radiusSelect">
-									<option value=5 selected>5</option>
-									<option value=10>10</option>
-									<option value=15>15</option>
+								<select class="form-control" id="radiusSelect" style='border-radius:0'>
+									<option value=5 selected>5 mi.</option>
+									<option value=10>10 mi.</option>
+									<option value=15>15 mi.</option>
 								</select>			  
 							</div>
 						</div>
@@ -122,6 +121,7 @@
 
 						<div id="buttonstyling">
 								<button class="btn btn-default navbar-btn" id="submit" data-toggle="modal" data-target="#mymodal"><span class="glyphicon glyphicon-film" aria-hidden="true" style='padding-right: 8px;'></span>Theater Showtimes</button>
+								</form>
 								</div>
 					
 					<div title="Add to Calendar" style='margin-top: 8px; margin-left: 162px;' class="addeventatc" id="calendarbutton" data-direct="google">
