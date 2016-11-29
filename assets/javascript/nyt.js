@@ -34,14 +34,18 @@ $(document).ready(function () {
 			var linkMessage = $('<div>').attr('id', "link")
 			var link = $('<a href=' + review.link.url + '>').text("Click here to visit article page.");
 
+			var date1 = moment(review.publication_date).format('MMMM Do YYYY');
+
 			linkMessage.append(link);
 	
 			$('#review').append(head).append('</br>');
 			$('#review').append(author);
-			$('#review').append(pubdate).append('<br/>, <br/>');
+			$('#review').append(date1).append('<br/>, <br/>');
 			$('#review').append(summary).append('<br/>, <br/>'); 
 			$('#review').append(linkMessage);
 			$('#review').append(copyright); 
+
+
 
 		})
 	}
