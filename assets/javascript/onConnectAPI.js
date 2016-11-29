@@ -12,6 +12,8 @@ $(document).ready(function () {
 
 		var radius = $('#radiusSelect').val();
 
+		var counter = 0;
+
 		var query = {
 			api_key: "c8j5g22c7auwnc6s39v86ep8",
 			zip: code,
@@ -32,7 +34,7 @@ $(document).ready(function () {
 
 				var theatreDiv = $('<div>');
 				var timeDiv = $('<div>');
-				timeDiv.addClass('time');
+				timeDiv.addClass('time' + i);
 				timeDiv.attr('id', response[i].theatreId);
 
 				var theatreName = response[i].name;
@@ -77,6 +79,8 @@ $(document).ready(function () {
 
 		$.ajax(request).done(function(response) {
 
+			var counter = 0;
+
 			for (i = 0; i < response.length; i++) {
 				
 				if(response[i].title === movieTitle) {
@@ -118,10 +122,11 @@ $(document).ready(function () {
 						timeButton.text(formatTime);
 
 						// if (movie.showtimes[i].theatre.id === $(+)) {}
-
 					};
 				};	
 			};
+
+			console.log(counter);
 		})
 	}
 
