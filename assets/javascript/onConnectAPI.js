@@ -93,7 +93,9 @@ $(document).ready(function () {
 						var time = movie.showtimes[i].dateTime;
 						var theatreId = movie.showtimes[i].theatre.id;
 
+
 						$('#' + theatreId).append(timeButton);
+	
 
 						var hours = time.substring(11, 13);
 						var minutes = time.substring(14, 16);

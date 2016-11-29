@@ -15,10 +15,16 @@ $(document).ready(function () {
 		var time = newDate.substring(12, 16);
 		var ampm = newDate.substring(20,22);
 		time = (time + " " + ampm);
+		// endTime = date.setHours(date.getHours() + 2);
+
+
 
 		$('#date').html(date);
+		$('#endDate').html(date);
 		$('#start').html(time);
+		$('endTime').html(endTime);
 		console.log(date.toLocaleString());
+
 	}
 
 	// for calendar - disables previous dates 
