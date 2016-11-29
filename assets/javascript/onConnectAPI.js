@@ -1,5 +1,6 @@
 $(document).ready(function () {
 
+	var counter = 0;
 	var movieTitle = localStorage.getItem('movieTitle');
 
 	$('#description').html(movieTitle);
@@ -11,8 +12,6 @@ $(document).ready(function () {
 		var date = $('#datepicker2').val();
 
 		var radius = $('#radiusSelect').val();
-
-		var counter = 0;
 
 		var query = {
 			api_key: "c8j5g22c7auwnc6s39v86ep8",
@@ -48,6 +47,9 @@ $(document).ready(function () {
 				theatreDiv.append(timeDiv);
 
 				$('#theatreName').append(theatreDiv);
+
+				counter++;
+
 			}
 		});
 	};
@@ -79,15 +81,13 @@ $(document).ready(function () {
 
 		$.ajax(request).done(function(response) {
 
-			var counter = 0;
-
 			for (i = 0; i < response.length; i++) {
 				
 				if(response[i].title === movieTitle) {
 
 					var movie = response[i]
 					
-					for (i = 0; movie.showtimes.length; i++) {
+					for (i = 0; i < movie.showtimes.length; i++) {
 
 						// Time
 
@@ -97,10 +97,8 @@ $(document).ready(function () {
 						var time = movie.showtimes[i].dateTime;
 						var theatreId = movie.showtimes[i].theatre.id;
 
-
 						$('#' + theatreId).append(timeButton);
 	
-
 						var hours = time.substring(11, 13);
 						var minutes = time.substring(14, 16);
 
@@ -126,7 +124,17 @@ $(document).ready(function () {
 				};	
 			};
 
-			console.log(counter);
+			for (i = 0; i < counter; i++) {
+				
+				if ( $('.time' + i).is(':empty') ) {
+
+					var noShowDiv = $('.time' + i)
+					var timeButton = $('<button type="button" class="btn btn-warning">');
+					timeButton.text("No Show Time");
+
+					noShowDiv.append(timeButton);
+				}
+			}		
 		})
 	}
 
