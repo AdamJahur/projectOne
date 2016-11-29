@@ -2,6 +2,8 @@ $(document).ready(function () {
 
 	var movieTitle = localStorage.getItem('movieTitle');
 
+	$('#description').html(movieTitle);
+
 	function theatreLocation () {
 
 		var code = $('#middle-label').val();
@@ -10,8 +12,6 @@ $(document).ready(function () {
 
 		var radius = $('#radiusSelect').val();
 
-		console.log($('#datepicker2').val());
-
 		var query = {
 			api_key: "c8j5g22c7auwnc6s39v86ep8",
 			zip: code,
@@ -19,7 +19,7 @@ $(document).ready(function () {
 			radius: radius
 		}
 
-		var queryURL = "http://data.tmsapi.com/v1.1/theatres?" + $.param(query);
+		var queryURL = "https://data.tmsapi.com/v1.1/theatres?" + $.param(query);
 
 		var request = {
 			url: queryURL,
@@ -68,7 +68,7 @@ $(document).ready(function () {
 			radius: radius
 		}
 
-		var queryURL = "http://data.tmsapi.com/v1.1/movies/showings?" + $.param(query);
+		var queryURL = "https://data.tmsapi.com/v1.1/movies/showings?" + $.param(query);
 
 		var request = {
 			url: queryURL,
@@ -88,10 +88,14 @@ $(document).ready(function () {
 						// Time
 
 						var timeButton = $('<button type="button" class="btn btn-warning">');
+						timeButton.on('click', click);
+						timeButton.attr('theatre', movie.showtimes[i].theatre.name);
 						var time = movie.showtimes[i].dateTime;
 						var theatreId = movie.showtimes[i].theatre.id;
 
+
 						$('#' + theatreId).append(timeButton);
+	
 
 						var hours = time.substring(11, 13);
 						var minutes = time.substring(14, 16);
@@ -125,6 +129,20 @@ $(document).ready(function () {
 
 		theatreLocation();
 		theatreTime();
+
 	});
+
+	function click () {
+
+		var time = $(this).text();
+		var date = $(this).attr('movie-time');
+		var theatre = $(this).attr('theatre');
+
+		date = date.substring(0, 10);
+
+		$('#date').html(date);
+		$('#start').html(time);
+		$('#location').html(theatre);
+	}
 
 })

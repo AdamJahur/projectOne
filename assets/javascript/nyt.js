@@ -20,8 +20,6 @@ $(document).ready(function () {
 
 		$.ajax(request).done(function(response) {
 	
-			console.log(response);
-
 			var review = response.results[0];
 			
 			var copyright = $('<div class ="copyright">').attr('id', copyright).text(response.copyright);

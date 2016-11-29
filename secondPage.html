@@ -10,7 +10,7 @@
 	<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 	<link href="https://fonts.googleapis.com/css?family=Great+Vibes|Raleway:400i" rel="stylesheet">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-	<link rel="stylesheet" href="http://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.min.css">
+	<link rel="stylesheet" href="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.min.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/movieDescriptionPage.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/nytReview.css">
 
@@ -114,8 +114,8 @@
 							<div class="form-group">
 								<select class="form-control" id="radiusSelect">
 									<option value=5 selected>5</option>
+									<option value=10>10</option>
 									<option value=15>15</option>
-									<option value=25>25</option>
 								</select>			  
 							</div>
 						</div>
@@ -128,18 +128,18 @@
 					<div title="Add to Calendar" style='margin-top: 8px; margin-left: 162px;' class="addeventatc" id="calendarbutton" data-direct="google">
 				Add to Calendar
 
-						<span class="start">12/07/2016 09:00 AM</span>
+						<span class="start"><div id="date"></div> <div id="start"></div></span>
 
-						<span class="end">12/07/2016 11:00 AM</span>
+						<span class="end"><div id="endDate"></div> <div id="endTime"></div></span>
 
 						<span class="timezone">America/New_York</span>
 
 
-						<span class="title">Summary of the event</span>
+						<span class="title">Movie Night!</span>
 
-						<span class="description">Description of the event</span>
+						<span class="description"><div id="description">Description of the event</div></span>
 
-						<span class="location">Location of the event</span>
+						<span class="location"><div id="location">Location of the event</div></span>
 
 						<span class="date_format">MM/DD/YYYY</span>
 
@@ -154,7 +154,7 @@
 
 		<div class="row">
 		
-				<div class="modal fade" id="mymodal">
+			<div class="modal fade" id="mymodal">
 		
 				<div class="modal-dialog">
 		
@@ -207,7 +207,7 @@
 		
 						<div id="moviePoster" class="media-object-section">
 		
-							<img id="poster" class="thumbnail" src="http://placehold.it/200x200?text=No+Image">
+							<img id="poster" class="thumbnail" src="https://placehold.it/200x200?text=No+Image">
 		
 						</div>
 		
@@ -270,7 +270,10 @@
 
 <!-- Javascript -->
 
-<script src="http://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.js"></script>
+
+
+<script src="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.js"></script>
+
 <script>$(document).foundation();</script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 <script src="assets/javascript/java2.js"></script>
