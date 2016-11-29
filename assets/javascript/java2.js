@@ -8,8 +8,6 @@ $(document).ready(function () {
 		var newDate = new Date();
 		newDate = newDate.toLocaleString();
 
-		console.log(newDate);
-
 		var date = newDate.substring(0, 10);
 
 		var time = newDate.substring(12, 16);
@@ -23,7 +21,6 @@ $(document).ready(function () {
 		$('#endDate').html(date);
 		$('#start').html(time);
 		$('endTime').html(endTime);
-		console.log(date.toLocaleString());
 
 	}
 

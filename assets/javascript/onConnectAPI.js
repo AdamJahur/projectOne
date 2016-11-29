@@ -1,5 +1,6 @@
 $(document).ready(function () {
 
+	var counter = 0;
 	var movieTitle = localStorage.getItem('movieTitle');
 
 	function theatreLocation () {
@@ -30,7 +31,7 @@ $(document).ready(function () {
 
 				var theatreDiv = $('<div>');
 				var timeDiv = $('<div>');
-				timeDiv.addClass('time');
+				timeDiv.addClass('time' + i);
 				timeDiv.attr('id', response[i].theatreId);
 
 				var theatreName = response[i].name;
@@ -44,6 +45,9 @@ $(document).ready(function () {
 				theatreDiv.append(timeDiv);
 
 				$('#theatreName').append(theatreDiv);
+
+				counter++;
+
 			}
 		});
 	};
@@ -80,7 +84,7 @@ $(document).ready(function () {
 
 					var movie = response[i]
 					
-					for (i = 0; movie.showtimes.length; i++) {
+					for (i = 0; i < movie.showtimes.length; i++) {
 
 						// Time
 
@@ -90,10 +94,8 @@ $(document).ready(function () {
 						// console.log("time", time);
 
 
-
 						$('#' + theatreId).append(timeButton);
 	
-
 						var hours = time.substring(11, 13);
 						var minutes = time.substring(14, 16);
 
@@ -120,11 +122,22 @@ $(document).ready(function () {
 						timeButton.text(formatTime);
 
 						// if (movie.showtimes[i].theatre.id === $(+)) {}
-
 					};
 				};	
 
 			};
+
+			for (i = 0; i < counter; i++) {
+				
+				if ( $('.time' + i).is(':empty') ) {
+
+					var noShowDiv = $('.time' + i)
+					var timeButton = $('<button type="button" class="btn btn-warning">');
+					timeButton.text("No Show Time");
+
+					noShowDiv.append(timeButton);
+				}
+			}		
 		})
 	}
 
