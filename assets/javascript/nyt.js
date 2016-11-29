@@ -26,19 +26,24 @@ $(document).ready(function () {
 	
 			var author = $('<div class="author">').attr('id', "review").text(review.byline);
 			var head = $('<div>').attr('id', "head").text(review.headline);
-			var pubdate = $('<div>').attr('id', "date").text(review.publication_date);
+
+			var date1 = moment(review.publication_date).format('MMMM Do YYYY');
+			var pubdate = $('<div>').attr('id', "date").text(date1);
+
+
 			var summary = $('<div>').attr('id', "short").text(review.summary_short);
 	
 			var linkMessage = $('<div>').attr('id', "link")
 			var link = $('<a href=' + review.link.url + '>').text("Click here to visit article page.");
 
-			var date1 = moment(review.publication_date).format('MMMM Do YYYY');
+			
+			//var date1 = moment(review.publication_date).format('MMMM Do YYYY');
 
 			linkMessage.append(link);
 	
 			$('#review').append(head).append('</br>');
 			$('#review').append(author);
-			$('#review').append(date1).append('<br/>, <br/>');
+			$('#review').append(pubdate).append('<br/>, <br/>');
 			$('#review').append(summary).append('<br/>, <br/>'); 
 			$('#review').append(linkMessage);
 			$('#review').append(copyright); 
