@@ -34,7 +34,7 @@ $(document).ready(function () {
 			var summary = $('<div>').attr('id', "short").text(review.summary_short);
 	
 			var linkMessage = $('<div>').attr('id', "link")
-			var link = $('<a href=' + review.link.url + '>').text("Click here to visit article page.");
+			var link = $('<a href="' + review.link.url + '" target="blank"' + '>').text("Click here to visit article page.");
 
 			
 			//var date1 = moment(review.publication_date).format('MMMM Do YYYY');
