@@ -90,7 +90,9 @@ $(document).ready(function () {
 						console.log("time", time);
 
 
+
 						$('#' + theatreId).append(timeButton);
+	
 
 						var hours = time.substring(11, 13);
 						var minutes = time.substring(14, 16);

@@ -15,10 +15,16 @@ $(document).ready(function () {
 		var time = newDate.substring(12, 16);
 		var ampm = newDate.substring(20,22);
 		time = (time + " " + ampm);
+		// endTime = date.setHours(date.getHours() + 2);
+
+
 
 		$('#date').html(date);
+		$('#endDate').html(date);
 		$('#start').html(time);
+		$('endTime').html(endTime);
 		console.log(date.toLocaleString());
+
 	}
 
 	// for calendar - disables previous dates 
@@ -55,7 +61,7 @@ $(document).ready(function () {
 
 				$('#movieImages').empty();
 
-				var blankImage = $('<img id="bigImage" class="thumbnail" src="http://placehold.it/650x350?text=No+Images">')
+				var blankImage = $('<img id="bigImage" class="thumbnail" src="https://placehold.it/650x350?text=No+Images">')
 				$('#movieImages').append(blankImage);
 				
 			} else {
@@ -177,7 +183,7 @@ $(document).ready(function () {
 			}
 				else {
 
-					$(".notrailer").attr('src', "http://placehold.it/100x100");
+					$(".notrailer").attr('src', "https://placehold.it/100x100");
 
 			}
 
