@@ -47,7 +47,6 @@ div#review.author::before {content: ' Written By:  ';
 }
 
 #review{
-  
   direction: rtl;
 }
 
@@ -56,7 +55,6 @@ div#review.author::before {content: ' Written By:  ';
    content: "\2605";
    position: absolute; 
    color: gold; 
-
 }
 
 #short{
@@ -68,14 +66,13 @@ div#review.author::before {content: ' Written By:  ';
 	font-style: italic;
 }
 
-
- 
-.stars,.stars1, .stars2, .stars3, .stars4, .stars5{
+.stars{
 	font-size: 250%;
 	display: inline-block;
 	margin-right: 20px;
 	position: relative;
 	left: -38%;
+}
 
 	
 
