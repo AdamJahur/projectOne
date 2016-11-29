@@ -33,7 +33,7 @@ $(document).ready(function () {
 
 				var theatreDiv = $('<div>');
 				var timeDiv = $('<div>');
-				timeDiv.addClass('time' + i);
+				timeDiv.addClass('timeDiv' + i + " time");
 				timeDiv.attr('id', response[i].theatreId);
 
 				var theatreName = response[i].name;
@@ -126,9 +126,9 @@ $(document).ready(function () {
 
 			for (i = 0; i < counter; i++) {
 				
-				if ( $('.time' + i).is(':empty') ) {
+				if ( $('.timeDiv' + i).is(':empty') ) {
 
-					var noShowDiv = $('.time' + i)
+					var noShowDiv = $('.timeDiv' + i)
 					var timeButton = $('<button type="button" class="btn btn-warning">');
 					timeButton.text("No Show Time");
 
