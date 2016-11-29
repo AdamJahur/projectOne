@@ -87,7 +87,7 @@ $(document).ready(function () {
 						var timeButton = $('<button type="button" class="btn btn-warning">');
 						var time = movie.showtimes[i].dateTime;
 						var theatreId = movie.showtimes[i].theatre.id;
-						console.log("time", time);
+						// console.log("time", time);
 
 
 
