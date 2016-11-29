@@ -43,8 +43,8 @@ $(document).ready(function () {
 	
 			$('#review').append(head).append('</br>');
 			$('#review').append(author);
-			$('#review').append(pubdate).append('<br/> <br/>');
-			$('#review').append(summary).append('<br/> <br/>'); 
+			$('#review').append(pubdate).append('<br/>, <br/>');
+			$('#review').append(summary).append('<br/>, <br/>'); 
 			$('#review').append(linkMessage);
 			$('#review').append(copyright); 
 
