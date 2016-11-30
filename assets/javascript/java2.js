@@ -5,6 +5,8 @@ $(document).ready(function () {
 	
 	function startDate () {
 
+		$('#start').empty();
+
 		var newDate = new Date();
 		newDate = newDate.toLocaleString();
 

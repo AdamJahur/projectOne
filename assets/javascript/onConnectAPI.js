@@ -142,8 +142,6 @@ $(document).ready(function () {
         })
     }
 
-    $('#submit').on('click', function() {
-
         theatreLocation();
         theatreTime();
 
