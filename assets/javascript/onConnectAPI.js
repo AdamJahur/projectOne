@@ -129,10 +129,14 @@ $(document).ready(function () {
 				if ( $('.timeDiv' + i).is(':empty') ) {
 
 					var noShowDiv = $('.timeDiv' + i)
-					var timeButton = $('<button type="button" class="btn btn-warning">');
+					var timeButton = $('<button type="button" class="btn btn-warning" id="noShowTime">');
 					timeButton.text("No Show Time");
 
                     noShowDiv.append(timeButton);
+
+                    $('#noShowTime').on('click', function(){
+                        $('.start').empty();
+                    });
                 }
             }        
         })
