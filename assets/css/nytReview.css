@@ -17,7 +17,7 @@
     margin: 0 auto;
 	text-align: center;
     font-family: 'Raleway', 'sans-serif';
-    font-size: 15px;
+    font-size: 14px;
 }
 
 div#review.author::before {content: ' Written By:  ';
@@ -37,7 +37,6 @@ div#review.author::before {content: ' Written By:  ';
 	text-align: center;
 	margin: 0 auto;
 	font-family: 'Raleway', 'sans-serif';
-
 }
 
 #panel4{
@@ -48,8 +47,7 @@ div#review.author::before {content: ' Written By:  ';
 }
 
 #review{
-  unicode-bidi: bidi-override;
-  direction: ltr;
+  direction: rtl;
 }
 
 #review > span:hover:before,
@@ -69,17 +67,17 @@ div#review.author::before {content: ' Written By:  ';
 }
 
 .stars{
-	padding-left: 450px;
-}
- 
-.stars,.stars1, .stars2, .stars3, .stars4, .stars5{
 	font-size: 250%;
 	display: inline-block;
-	margin: 0 auto;
-	text-align: center;
-	max-width: 800px;	
-} 
+	margin-right: 20px;
+	position: relative;
+	left: -38%;
+}
 
+	
+
+
+	
 
 
 

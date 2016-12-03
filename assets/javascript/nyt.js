@@ -20,19 +20,24 @@ $(document).ready(function () {
 
 		$.ajax(request).done(function(response) {
 	
-			console.log(response);
-
 			var review = response.results[0];
 			
 			var copyright = $('<div class ="copyright">').attr('id', copyright).text(response.copyright);
 	
 			var author = $('<div class="author">').attr('id', "review").text(review.byline);
 			var head = $('<div>').attr('id', "head").text(review.headline);
-			var pubdate = $('<div>').attr('id', "date").text(review.publication_date);
+
+			var date1 = moment(review.publication_date).format('MMMM Do YYYY');
+			var pubdate = $('<div>').attr('id', "date").text(date1);
+
+
 			var summary = $('<div>').attr('id', "short").text(review.summary_short);
 	
 			var linkMessage = $('<div>').attr('id', "link")
-			var link = $('<a href=' + review.link.url + '>').text("Click here to visit article page.");
+			var link = $('<a href="' + review.link.url + '" target="blank"' + '>').text("Click here to visit article page.");
+
+			
+			//var date1 = moment(review.publication_date).format('MMMM Do YYYY');
 
 			linkMessage.append(link);
 	
@@ -43,9 +48,11 @@ $(document).ready(function () {
 			$('#review').append(linkMessage);
 			$('#review').append(copyright); 
 
+
+
 		})
 	}
 
 	nytReview();
-	
+
 })

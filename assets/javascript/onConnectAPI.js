@@ -1,128 +1,161 @@
 $(document).ready(function () {
 
-	var movieTitle = localStorage.getItem('movieTitle');
+    var counter = 0;
+    var movieTitle = localStorage.getItem('movieTitle');
 
-	function theatreLocation () {
+    $('#description').html(movieTitle);
 
-		var code = $('#middle-label').val();
+    function theatreLocation () {
 
-		var date = $('#datepicker2').val();
+        var code = $('#middle-label').val();
 
-		console.log($('#datepicker2').val());
+        var date = $('#datepicker2').val();
 
-		var query = {
-			api_key: "c8j5g22c7auwnc6s39v86ep8",
-			zip: code,
-			startDate: date,
-			radius: "10"
-		}
+        var radius = $('#radiusSelect').val();
 
-		var queryURL = "http://data.tmsapi.com/v1.1/theatres?" + $.param(query);
+        var query = {
+            api_key: "c8j5g22c7auwnc6s39v86ep8",
+            zip: code,
+            startDate: date,
+            radius: radius
+        }
 
-		var request = {
-			url: queryURL,
-			method: 'GET'
-		}
+        var queryURL = "https://data.tmsapi.com/v1.1/theatres?" + $.param(query);
 
-		$.ajax(request).done(function(response) {
+        var request = {
+            url: queryURL,
+            method: 'GET'
+        }
 
-			for (i = 0; i < response.length; i++) {
+        $.ajax(request).done(function(response) {
+
+            for (i = 0; i < response.length; i++) {
 
 				var theatreDiv = $('<div>');
 				var timeDiv = $('<div>');
-				timeDiv.addClass('time');
+				timeDiv.addClass('timeDiv' + i + " time");
 				timeDiv.attr('id', response[i].theatreId);
 
-				var theatreName = response[i].name;
-				var theatreNameDiv = $('<div>');
+                var theatreName = response[i].name;
+                var theatreNameDiv = $('<div>');
 
-				theatreNameDiv.text(theatreName);
-				theatreNameDiv.attr('theatre-name', theatreName);
+                theatreNameDiv.text(theatreName);
+                theatreNameDiv.attr('theatre-name', theatreName);
 
-				theatreDiv.addClass('theatreDiv');
-				theatreDiv.append(theatreNameDiv);
-				theatreDiv.append(timeDiv);
+                theatreDiv.addClass('theatreDiv');
+                theatreDiv.append(theatreNameDiv);
+                theatreDiv.append(timeDiv);
 
-				$('#theatreName').append(theatreDiv);
-			}
-		});
-	};
+                $('#theatreName').append(theatreDiv);
 
-	function theatreTime () {
+                counter++;
 
-		var code = $('#middle-label').val();
+            }
+        });
+    };
 
-		var date = $('#datepicker2').val();
+    function theatreTime () {
 
-		$('#movieTimes').empty();
-		$('#theatreName').empty();
+        var code = $('#middle-label').val();
 
-		var query = {
-			api_key: "c8j5g22c7auwnc6s39v86ep8",
-			zip: code,
-			startDate: date,
-			radius: "10"
-		}
+        var date = $('#datepicker2').val();
 
-		var queryURL = "http://data.tmsapi.com/v1.1/movies/showings?" + $.param(query);
+        var radius = $('#radiusSelect').val();
 
-		var request = {
-			url: queryURL,
-			method: 'GET'
-		}
+        $('#movieTimes').empty();
+        $('#theatreName').empty();
 
-		$.ajax(request).done(function(response) {
+        var query = {
+            api_key: "c8j5g22c7auwnc6s39v86ep8",
+            zip: code,
+            startDate: date,
+            radius: radius
+        }
 
-			console.log(response);
+        var queryURL = "https://data.tmsapi.com/v1.1/movies/showings?" + $.param(query);
 
-			for (i = 0; i < response.length; i++) {
+        var request = {
+            url: queryURL,
+            method: 'GET'
+        }
+
+        $.ajax(request).done(function(response) {
+
+            for (i = 0; i < response.length; i++) {
+                
+                if(response[i].title === movieTitle) {
+
+                    var movie = response[i]
+                    
+                    for (i = 0; i < movie.showtimes.length; i++) {
+
+                        // Time
+
+                        var timeButton = $('<button type="button" class="btn btn-warning">');
+                        timeButton.on('click', click);
+                        timeButton.attr('theatre', movie.showtimes[i].theatre.name);
+                        var time = movie.showtimes[i].dateTime;
+                        var theatreId = movie.showtimes[i].theatre.id;
+
+                        $('#' + theatreId).append(timeButton);
+    
+                        var hours = time.substring(11, 13);
+                        var minutes = time.substring(14, 16);
+
+                        var isPM = false;
+
+                        if (hours >= 13){
+
+                            hours-=12;
+                            isPM = true;
+                        } else if (hours == 12){
+
+                            isPM = true;
+                        };
+
+                        var formatTime = hours + ":" + minutes;
+                        formatTime+= (isPM) ? " PM" : " AM";
+
+                        timeButton.attr('movie-time', time);
+                        timeButton.text(formatTime);
+
+                        // if (movie.showtimes[i].theatre.id === $(+)) {}
+                    };
+                };    
+            };
+
+			for (i = 0; i < counter; i++) {
 				
-				if(response[i].title === movieTitle) {
+				if ( $('.timeDiv' + i).is(':empty') ) {
 
-					var movie = response[i]
-					
-					for (i = 0; movie.showtimes.length; i++) {
+					var noShowDiv = $('.timeDiv' + i)
+					var timeButton = $('<button type="button" class="btn btn-warning">');
+					timeButton.text("No Show Time");
 
-						// Time
+                    noShowDiv.append(timeButton);
+                }
+            }        
+        })
+    }
 
-						var timeButton = $('<button type="button" class="btn btn-warning">');
-						var time = movie.showtimes[i].dateTime;
-						var theatreId = movie.showtimes[i].theatre.id;
+    $('#submit').on('click', function() {
 
-						$('#' + theatreId).append(timeButton);
+        theatreLocation();
+        theatreTime();
 
-						var hours = time.substring(11, 13);
-						var minutes = time.substring(14, 16);
+    });
 
-						var isPM = false;
+    function click () {
 
-						if (hours >= 13){
+        var time = $(this).text();
+        var date = $(this).attr('movie-time');
+        var theatre = $(this).attr('theatre');
 
-							hours-=12;
-							isPM = true;
-						} else if (hours == 12){
+        date = date.substring(0, 10);
 
-							isPM = true;
-						};
-
-						var formatTime = hours + ":" + minutes;
-						formatTime+= (isPM) ? " PM" : " AM";
-
-						timeButton.attr('movie-time', time);
-						timeButton.text(formatTime);
-
-						// if (movie.showtimes[i].theatre.id === $(+)) {}
-
-					};
-				};	
-			};
-		})
-	}
-
-	$('#submit').on('click', function() {
-
-		theatreLocation();
-		theatreTime();
-	});
+        $('#date').html(date);
+        $('#start').html(time);
+        $('#location').html(theatre);
+    }
 
 })

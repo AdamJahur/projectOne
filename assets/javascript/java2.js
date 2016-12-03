@@ -3,6 +3,27 @@ $(document).ready(function () {
 	var movieID = localStorage.getItem('movieID');
 	var moviePoster = localStorage.getItem('movieURL');
 	
+	function startDate () {
+
+		var newDate = new Date();
+		newDate = newDate.toLocaleString();
+
+		var date = newDate.substring(0, 10);
+
+		var time = newDate.substring(12, 16);
+		var ampm = newDate.substring(20,22);
+		time = (time + " " + ampm);
+		// endTime = date.setHours(date.getHours() + 2);
+
+
+
+		$('#date').html(date);
+		$('#endDate').html(date);
+		$('#start').html(time);
+		$('endTime').html(endTime);
+
+	}
+
 	// for calendar - disables previous dates 
 	$( function() {
 		$("#datepicker2").datepicker({
@@ -37,7 +58,7 @@ $(document).ready(function () {
 
 				$('#movieImages').empty();
 
-				var blankImage = $('<img id="bigImage" class="thumbnail" src="http://placehold.it/650x350?text=No+Images">')
+				var blankImage = $('<img id="bigImage" class="thumbnail" src="https://placehold.it/650x350?text=No+Images">')
 				$('#movieImages').append(blankImage);
 				
 			} else {
@@ -159,23 +180,19 @@ $(document).ready(function () {
 			}
 				else {
 
-					$(".notrailer").attr('src', "http://placehold.it/100x100");
+					$(".notrailer").attr('src', "https://placehold.it/100x100");
 
 			}
 
 		})
-
-	
-}
-	
+	}
 
 	// Start Up Functions		
 	multiImageFunction();
 	movieDescription();
 	actorsName();
 	trailer();
-	
-
+	startDate();
 
 });
 
